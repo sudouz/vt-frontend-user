@@ -16,6 +16,16 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login/Login.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'error',
+      component: () => import('../views/Error/Error.vue')
+    },
   ],
 });
 

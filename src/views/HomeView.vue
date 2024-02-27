@@ -31,7 +31,7 @@ import Footer from '../components/Footer.vue'
 const navbar = useNavStore();
 </script>
 
-<style >
+<style>
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 *{

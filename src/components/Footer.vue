@@ -4,7 +4,7 @@
         <div class="container mx-auto px-5">
             <nav class="py-5 flex items-center justify-between">
                 <div class="flex items-center gap-5">
-                    <img class="w-[80px] h-[80px] rounded-full" src="/logo.jpg" alt="">
+                    <img class="w-[80px] h-[80px] rounded-full" :src="navbar.userNav ? '/logo-black.jpg' : 'logo-white.jpg'" alt="">
                     <ul class="flex items-center gap-10">
                         <li class="font-medium hover:text-[#4ec3e0]">
                             <router-link to="/">Bosh sahifa</router-link>
