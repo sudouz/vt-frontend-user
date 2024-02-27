@@ -17,19 +17,19 @@ const router = createRouter({
       ],
     },
     {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/Login/Login.vue')
+      path: "/login",
+      name: "login",
+      component: () => import("../views/Login/Login.vue"),
     },
     {
-      path: '/register',
-      name: 'register',
-      component: () => import('../views/Register/Register.vue')
+      path: "/register",
+      name: "register",
+      component: () => import("../views/Register/Register.vue"),
     },
     {
-      path: '/:pathMatch(.*)*',
-      name: 'error',
-      component: () => import('../views/Error/Error.vue')
+      path: "/:pathMatch(.*)*",
+      name: "error",
+      component: () => import("../views/Error/Error.vue"),
     },
   ],
 });

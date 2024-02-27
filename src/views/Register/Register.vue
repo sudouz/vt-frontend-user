@@ -1,8 +1,7 @@
 <template>
     <section :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-screen lg:py-0">
-            <div class="z-10 w-full bg-transparent border border-[#4ec3e0] rounded-lg md:mt-0 sm:max-w-md xl:p-0"
-                :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
+            <div class="z-10 w-full bg-transparent border border-[#4ec3e0] rounded-lg md:mt-0 sm:max-w-md xl:p-0">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                     <div class="flex flex-col items-center gap-3">
                         <img class="md:w-[150px] md:h-[150px] w-[100px] h-[100px] rounded-full"
@@ -40,12 +39,9 @@
                                 class="border outline-none text-sm rounded-lg block w-full p-2.5 bg-transparent border-[#4ec3e0] placeholder-gray-400"
                                 required="" />
                         </div>
-                        <div class="flex items-center justify-between">
-                            <a href="#" class="text-sm font-medium text-[#4ec3e0] hover:underline">Parolni unutdingizmi?</a>
-                        </div>
                         <button type="submit"
                             class="w-full bg-[#4ec3e0] border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                            Kirish
+                            Ro'yxatdan o'tish
                         </button>
                         <span class="flex sm:flex-row flex-col items-center gap-1 justify-center text-sm">Shaxsiy
                             kabinetingiz bormi
