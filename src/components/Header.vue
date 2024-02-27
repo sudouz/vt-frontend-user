@@ -39,7 +39,7 @@
                 <i class='text-[30px] transition-transform duration-700' :class="sidebar.sidebar ? 'bx bx-menu' : 'bx bx-x'"></i>
               </button>
               <div
-                class="absolute z-10 top-0 left-0 right-0 w-full transition-transform duration-700 -translate-y-full bg-gray-200 border-r sm:translate-y-0"
+                class="absolute z-10 top-0 left-0 right-0 w-full transition-transform duration-700 -translate-y-full bg-gray-200 border-r"
                 :class="sidebar.sidebar ? '-translate-y-full' : 'translate-y-0'" @mousedown="sidebar.sidebar = true">
                 <div class="w-full h-screen flex flex-col gap-10 items-end px-5 pt-24"
                   :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">

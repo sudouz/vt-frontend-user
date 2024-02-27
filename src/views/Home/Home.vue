@@ -1,19 +1,23 @@
 <template>
-    <div class="hero" :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }"  >
-        <h1 id="changingText" class="hero-title" >Hush kelibsiz!</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam.   
-        </p>
-        <button>
-            Kurslardi korish
-        </button>
-    </div>
+    <section>
+        <div class="container mx-auto px-5">
+            <div class="hero" :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
+                <h1 id="changingText" class="hero-title 2xl:text-9xl lg:text-8xl sm:text-6xl text-3xl">Hush kelibsiz!</h1>
+                <p class=" sm:text-base text-xs mt-3 sm:mt-5 lg:mt-10">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam
+                </p>
+                <button class="rounded-full">
+                    Kurslarni korish
+                </button>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script setup>
 import { useNavStore } from "../../stores/toggle";
 const navbar = useNavStore();
-const textArray = ["Hush kelibsiz!", "Birinchi qadam sizdan!", "Ilimni bizdan o'rganing!"];
+const textArray = ["Hush kelibsiz!", "Birinchi qadam sizdan!", "Ilimni bizdan oling!"];
 let currentTextIndex = 0;
 
 function changeText() {
@@ -28,35 +32,47 @@ setInterval(changeText, 3000);
 </script>
 
 <style lang="css" scoped>
-.hero{
+.hero {
     padding-top: 100px;
     position: relative;
     z-index: 2;
 }
-.hero-title{
-    font-size:60px;
+
+.hero-title {
     text-align: center;
     margin-top: 150px;
     cursor: pointer;
     font-weight: bold;
     animation: fadeinout 3s infinite;
 }
-.hero p{
-    margin-top: 20px;
+
+.hero p {
     text-align: center;
+    color: #4ec3e0;
 }
-.hero button{
-    padding: 10px;
+
+.hero button {
+    color: white;
+    padding: 10px 30px;
     border: 2px solid #4ec3e0;
     margin: 0 auto;
     display: block;
     margin-top: 20px;
-    border-radius: 10px;
-    background:#4ec3e0 ;
-}
-@keyframes fadeinout {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+    background: #4ec3e0;
 }
 
-</style>
+.hero button:hover {
+    background-color: transparent;
+}
+
+@keyframes fadeinout {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}</style>
