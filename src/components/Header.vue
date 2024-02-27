@@ -1,32 +1,26 @@
 <template>
-  <header class="fixed top-0 z-10 w-full"
+  <header class="fixed top-0 z-10 w-full border-b border-[#4ec3e0]"
     :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
-    <div class="container mx-auto px-5 border-b border-green-500">
+    <div class="container mx-auto px-5">
       <nav class="py-5 flex items-center justify-between">
-        <a href="#" class="uppercase font-bold text-[30px]">virtual <span class="text-green-500">ta'lim</span></a>
+        <a href="#" class="uppercase font-bold text-[30px]">virtual <span class="text-[#4ec3e0]">ta'lim</span></a>
         <div class="flex items-center gap-5">
           <ul class="flex items-center gap-10">
-          <li class="font-medium hover:text-green-500">
+          <li class="font-medium hover:text-[#4ec3e0]">
             <router-link to="/">Bosh sahifa</router-link>
           </li>
-          <li class="font-medium hover:text-green-500">
-            <router-link to="/yangiliklar">Yangiliklar</router-link>
-          </li>
-          <li class="font-medium hover:text-green-500">
+          <li class="font-medium hover:text-[#4ec3e0]">
             <router-link to="/kurslar">Kurslar</router-link>
           </li>
-          <li class="font-medium hover:text-green-500">
-            <router-link to="/oqtuvchilar">O'qtuvchilar</router-link>
-          </li>
-          <li class="font-medium hover:text-green-500">
+          <li class="font-medium hover:text-[#4ec3e0]">
             <router-link to="/boglanich">Bog'lanish</router-link>
           </li>
         </ul>
-        <div class="flex items-center gap-5 border-l pl-5 border-[#22C55E]">
+        <div class="flex items-center gap-5 border-l pl-5 border-[#4ec3e0]">
           <button
-            class="login px-7 py-2 border border-green-500 font-medium rounded-full hover:bg-green-500">Kirish</button>
+            class="login px-7 py-2 border border-[#4ec3e0] font-medium rounded-full hover:bg-[#4ec3e0]">Kirish</button>
           <button
-            class="register px-7 py-2 border border-green-500 bg-green-500 font-medium rounded-full hover:bg-transparent">Ro'yxatdan
+            class="register px-7 py-2 border border-[#4ec3e0] bg-[#4ec3e0] font-medium rounded-full hover:bg-transparent">Ro'yxatdan
             o'tish</button>
           <div class="relative" @click="navbar.setMode()">
             <b class="flex w-[3.1rem] items-center justify-between h-7 cursor-pointer border-2 rounded-full"><span
@@ -51,16 +45,16 @@ const navbar = useNavStore();
 
 <style lang="css" scoped>
 .router-link-exact-active {
-  color: #22C55E;
+  color: #4ec3e0;
 }
 
 button,
-li {
+li, a {
   transition: 0.5s;
 }
 
 .register:hover+.login {
-  background: #22C55E;
+  background: #4ec3e0;
 }
 
 .login:hover+.register {
