@@ -44,6 +44,9 @@ setInterval(changeText, 3000);
     cursor: pointer;
     font-weight: bold;
     animation: fadeinout 3s infinite;
+
+    font-family: "Roboto", sans-serif;
+
 }
 
 .hero p {
