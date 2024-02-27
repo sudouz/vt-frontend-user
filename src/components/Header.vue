@@ -35,17 +35,15 @@
               }"></p>
             </div>
             <div class="lg:hidden block border-l border-[#4ec3e0] pl-5 py-1">
-              <button @click="openModal">
-                <i class='bx bx-menu text-[30px]'></i>
+              <button @click="openModal" class="relative z-20">
+                <i class='text-[30px] transition-transform duration-700' :class="sidebar.sidebar ? 'bx bx-menu' : 'bx bx-x'"></i>
               </button>
-              <div :class="modal ? 'block' : 'hidden'">
-                <div
-                  class="absolute z-10 top-0 left-0 right-0 w-full min-h-screen flex flex-col gap-10 items-end px-5 pt-10"
+              <div
+                class="absolute z-10 top-0 left-0 right-0 w-full transition-transform duration-700 -translate-y-full bg-gray-200 border-r sm:translate-y-0"
+                :class="sidebar.sidebar ? '-translate-y-full' : 'translate-y-0'" @mousedown="sidebar.sidebar = true">
+                <div class="w-full h-screen flex flex-col gap-10 items-end px-5 pt-24"
                   :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
-                  <button @click="openModal">
-                    <i class='bx bx-x text-[30px]'></i>
-                  </button>
-                  <ul :class="modal ? 'flex' : 'hidden'" class="flex-col items-center gap-10 w-full">
+                  <ul class="w-full flex flex-col gap-10 items-center">
                     <li class="font-medium hover:text-[#4ec3e0]">
                       <router-link to="/">Bosh sahifa</router-link>
                     </li>
@@ -73,10 +71,10 @@
 
 <script setup>
 import { useNavStore } from "../stores/toggle";
-import { ref } from "vue";
+import { useSidebarStore } from "../stores/sidebar";
 const navbar = useNavStore();
-const modal = ref(false)
-const openModal = () => (modal.value = !modal.value);
+const sidebar = useSidebarStore();
+const openModal = () => (sidebar.sidebar = !sidebar.sidebar);
 </script>
 
 <style lang="css" scoped>
@@ -88,6 +86,10 @@ button,
 li,
 a {
   transition: 0.5s;
+}
+
+.menu {
+  transition: transform 5s;
 }
 
 .register:hover+.login {
