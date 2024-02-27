@@ -7,7 +7,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laboriosam
                 </p>
                 <button class="rounded-full">
-                    Kurslarni korish
+                    <router-link to="/kurslar">Kurslarni korish</router-link>
                 </button>
             </div>
         </div>
