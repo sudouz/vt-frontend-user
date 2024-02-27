@@ -1,7 +1,7 @@
 <template>
   <section
     :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto sm:h-screen lg:py-0">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto min-h-screen lg:py-0">
       <div class="z-10 w-full bg-transparent border border-[#4ec3e0] rounded-lg md:mt-0 sm:max-w-md xl:p-0"
         :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
