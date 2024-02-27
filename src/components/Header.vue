@@ -3,9 +3,12 @@
     :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
     <div class="container mx-auto px-5">
       <nav class="py-5 flex items-center justify-between">
-        <a href="#" class="uppercase font-bold text-[30px]">virtual <span class="text-[#4ec3e0]">ta'lim</span></a>
+        <a href="#" class="hidden lg:block uppercase font-bold text-[30px]">virtual <span
+            class="text-[#4ec3e0]">ta'lim</span></a>
+        <img class="lg:hidden block w-[70px] h-[70px] rounded-full"
+          :src="navbar.userNav ? '/logo-black.jpg' : 'logo-white.jpg'" alt="">
         <div class="flex items-center gap-5">
-          <ul class="flex items-center gap-10">
+          <ul class="hidden lg:flex items-center gap-10">
             <li class="font-medium hover:text-[#4ec3e0]">
               <router-link to="/">Bosh sahifa</router-link>
             </li>
@@ -16,11 +19,11 @@
               <router-link to="/boglanich">Bog'lanish</router-link>
             </li>
           </ul>
-          <div class="flex items-center gap-5 border-l pl-5 border-[#4ec3e0]">
+          <div class="flex items-center gap-5 lg:border-l lg:pl-5 border-[#4ec3e0]">
             <router-link to="/login"
-              class="login px-7 py-2 border border-[#4ec3e0] font-medium rounded-full hover:bg-[#4ec3e0]">Kirish</router-link>
+              class="login lg:block hidden px-7 py-2 border border-[#4ec3e0] font-medium rounded-full bg-transparent hover:bg-[#4ec3e0] text-[#4ec3e0] hover:text-white">Kirish</router-link>
             <router-link to="/register"
-              class="register px-7 py-2 border border-[#4ec3e0] bg-[#4ec3e0] font-medium rounded-full hover:bg-transparent">Ro'yxatdan
+              class="register lg:block hidden px-7 py-2 border border-[#4ec3e0] bg-[#4ec3e0] font-medium rounded-full hover:bg-transparent text-white hover:text-[#4ec3e0]">Ro'yxatdan
               o'tish</router-link>
             <div class="relative" @click="navbar.setMode()">
               <b class="flex w-[3.1rem] items-center justify-between h-7 cursor-pointer border-2 rounded-full"><span
@@ -31,6 +34,36 @@
                 'bg-white': navbar.userNav,
               }"></p>
             </div>
+            <div class="lg:hidden block border-l border-[#4ec3e0] pl-5 py-1">
+              <button @click="openModal">
+                <i class='bx bx-menu text-[30px]'></i>
+              </button>
+              <div :class="modal ? 'block' : 'hidden'">
+                <div
+                  class="absolute z-10 top-0 left-0 right-0 w-full min-h-screen flex flex-col gap-10 items-end px-5 pt-10"
+                  :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
+                  <button @click="openModal">
+                    <i class='bx bx-x text-[30px]'></i>
+                  </button>
+                  <ul :class="modal ? 'flex' : 'hidden'" class="flex-col items-center gap-10 w-full">
+                    <li class="font-medium hover:text-[#4ec3e0]">
+                      <router-link to="/">Bosh sahifa</router-link>
+                    </li>
+                    <li class="font-medium hover:text-[#4ec3e0]">
+                      <router-link to="/kurslar">Kurslar</router-link>
+                    </li>
+                    <li class="font-medium hover:text-[#4ec3e0]">
+                      <router-link to="/boglanich">Bog'lanish</router-link>
+                    </li>
+                    <router-link to="/login"
+                      class="login px-7 py-2 border border-[#4ec3e0] font-medium rounded-full bg-transparent hover:bg-[#4ec3e0] text-[#4ec3e0] hover:text-white">Kirish</router-link>
+                    <router-link to="/register"
+                      class="register px-7 py-2 border border-[#4ec3e0] bg-[#4ec3e0] font-medium rounded-full hover:bg-transparent text-white hover:text-[#4ec3e0]">Ro'yxatdan
+                      o'tish</router-link>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -40,7 +73,10 @@
 
 <script setup>
 import { useNavStore } from "../stores/toggle";
+import { ref } from "vue";
 const navbar = useNavStore();
+const modal = ref(false)
+const openModal = () => (modal.value = !modal.value);
 </script>
 
 <style lang="css" scoped>
@@ -56,9 +92,11 @@ a {
 
 .register:hover+.login {
   background: #4ec3e0;
+  color: white;
 }
 
 .login:hover+.register {
   background: transparent;
+  color: #4ec3e0;
 }
 </style>

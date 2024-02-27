@@ -2,17 +2,17 @@
     <footer class="w-full border-t border-[#4ec3e0]"
         :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <nav class="py-5 flex items-center justify-between">
-                <div class="flex items-center gap-5">
-                    <img class="w-[80px] h-[80px] rounded-full" :src="navbar.userNav ? '/logo-black.jpg' : 'logo-white.jpg'" alt="">
-                    <ul class="flex items-center gap-10">
-                        <li class="font-medium hover:text-[#4ec3e0]">
+            <nav class="py-5 flex md:flex-row flex-col md:items-center items-end justify-between">
+                <div class="flex items-center gap-5 w-full">
+                    <img class="w-[70px] h-[70px] rounded-full" :src="navbar.userNav ? '/logo-black.jpg' : 'logo-white.jpg'" alt="">
+                    <ul class="flex items-center md:gap-10 gap-5 w-full md:justify-start justify-between">
+                        <li class="font-medium md:text-[16px] text-sm hover:text-[#4ec3e0]">
                             <router-link to="/">Bosh sahifa</router-link>
                         </li>
-                        <li class="font-medium hover:text-[#4ec3e0]">
+                        <li class="font-medium md:text-[16px] text-sm hover:text-[#4ec3e0]">
                             <router-link to="/kurslar">Kurslar</router-link>
                         </li>
-                        <li class="font-medium hover:text-[#4ec3e0]">
+                        <li class="font-medium md:text-[16px] text-sm hover:text-[#4ec3e0]">
                             <router-link to="/boglanich">Bog'lanish</router-link>
                         </li>
                     </ul>

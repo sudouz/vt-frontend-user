@@ -28,7 +28,7 @@
               <a href="#" class="text-sm font-medium text-[#4ec3e0] hover:underline">Parolni unutdingizmi?</a>
             </div>
             <button type="submit"
-              class="w-full bg-[#4ec3e0] border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+              class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
               Kirish
             </button>
             <span class="flex sm:flex-row flex-col items-center gap-1 justify-center text-sm">Shaxsiy kabinetingiz yo'qmi <router-link to="/register" class="text-[#4ec3e0] hover:underline">Ro'yxatdan o'tish</router-link></span>

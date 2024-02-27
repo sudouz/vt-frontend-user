@@ -40,7 +40,7 @@
                                 required="" />
                         </div>
                         <button type="submit"
-                            class="w-full bg-[#4ec3e0] border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                            class="w-full text-white bg-[#4ec3e0] border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                             Ro'yxatdan o'tish
                         </button>
                         <span class="flex sm:flex-row flex-col items-center gap-1 justify-center text-sm">Shaxsiy
