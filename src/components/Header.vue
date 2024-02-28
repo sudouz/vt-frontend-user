@@ -34,7 +34,7 @@
                   class="rounded-full"><i class="bx bxs-moon pl-1 text-yellow-300 rounded-full"></i></span><span
                   class="rounded-full"><i class="bx bxs-sun px-1 rounded-full text-yellow-300"></i></span></b>
               <p class="w-6 h-6 rounded-full absolute top-[2px] -z-10 duration-1000" :class="{
-                'translate-x-full bg-black': !navbar.userNav,
+                'translate-x-full bg-[#12111F]': !navbar.userNav,
                 'bg-white': navbar.userNav,
               }"></p>
             </div>
