@@ -1,10 +1,14 @@
 <template>
-  <header class="fixed top-0 z-10 w-full border-b border-[#4ec3e0]"
+  <header class="fixed top-0 z-20 w-full border-b border-[#4ec3e0]"
     :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
     <div class="container mx-auto px-5">
       <nav class="py-5 flex items-center justify-between">
-        <a href="#" class="hidden lg:block uppercase font-bold text-[30px]">virtual <span
-            class="text-[#4ec3e0]">ta'lim</span></a>
+        <div class="hidden lg:flex items-center gap-3">
+          <img class="w-[70px] h-[70px] rounded-full"
+          :src="navbar.userNav ? '/logo-black.jpg' : 'logo-white.jpg'" alt="">
+          <a href="#" class="uppercase font-bold text-[30px]">Virtual <span
+            class="text-[#4ec3e0]">Ta'lim</span></a>
+        </div>
         <img class="lg:hidden block w-[70px] h-[70px] rounded-full"
           :src="navbar.userNav ? '/logo-black.jpg' : 'logo-white.jpg'" alt="">
         <div class="flex items-center gap-5">
