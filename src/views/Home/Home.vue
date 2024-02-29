@@ -147,7 +147,7 @@
                         <div>
                             <label for="savol" class="block mb-2 sm:text-lg text-sm font-medium">Savolingiz</label>
                             <textarea name="" id="savol" cols="30" rows="10" placeholder="Savol.."
-                                class="w-full h-24 border outline-none text-sm rounded-lg block p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"></textarea>
+                                class="w-full min-h-24 max-h-24 border outline-none text-sm rounded-lg block p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"></textarea>
                         </div>
                         <button type="submit"
                             class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
