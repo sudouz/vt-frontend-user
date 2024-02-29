@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container mx-auto 2xl:px-0 px-5">
-            <div class="2xl:pt-60 pt-40 relative z-10">
+            <div class="2xl:pt-40 pt-40 relative z-10">
                 <div class="box px-5 py-20 rounded-3xl flex items-center justify-between">
                     <div class="flex flex-col items-start sm:w-[50%] gap-10"
                         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
@@ -23,7 +23,7 @@
         </div>
     </section>
 
-    <section class="bg-[#4ec3e0] relative 2xl:mt-40 mt-20 z-10 overflow-x-hidden">
+    <section class="bg-[#4ec3e0] relative sm:mt-20 mt-10 z-10 overflow-x-hidden">
         <div class="container mx-auto px-5">
             <div class="items flex justify-between lg:gap-20 gap-10 py-5" data-v-e33b1926="">
                 <div class="entry flex items-center border rounded-3xl gap-3 p-5" data-v-e33b1926="">
@@ -56,7 +56,7 @@
         </div>
     </section>
 
-    <section class="relative z-10 2xl:pt-40 pt-20" :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
+    <section class="relative z-10 sm:pt-20 pt-10" :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto 2xl:px-0 px-5">
             <div class="box rounded-3xl p-5">
                 <h2 class="sm:text-3xl text-2xl font-bold mb-10">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
