@@ -7,7 +7,8 @@
                         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
                         <h2 class="uppercase sm:text-2xl text-md font-bold text-[#4ec3e0]">virtual ta'lim</h2>
                         <div class="flex flex-col items-center gap-5">
-                            <h1 class="hero-title 2xl:text-8xl lg:text-7xl sm:text-6xl text-2xl font-bold text-center">Biz bilim
+                            <h1 class="hero-title 2xl:text-8xl lg:text-7xl sm:text-6xl text-2xl font-bold text-center">Biz
+                                bilim
                                 olishingizga ko'maklashamiz!</h1>
                             <p class=" sm:text-base text-xs">
                                 Istalgan joyda, o'zingizga qulay vaqtda o'qish imkoniyati..
@@ -59,7 +60,8 @@
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto 2xl:px-0 px-5">
-            <div class="box rounded-3xl px-5 py-10">
+            <div class="box rounded-3xl px-5 py-10"
+                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                 <h2 class="sm:text-3xl text-2xl font-bold mb-10">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
                 <div class="grid lg:grid-cols-2 gap-5">
                     <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
@@ -110,7 +112,54 @@
         </div>
     </section>
 
-    <section class="bg-[#4ec3e0] relative sm:mt-20 mt-10 z-10 overflow-x-hidden">
+    <section class="relative z-10 lg:pt-40 sm:pt-20 pt-10"
+        :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
+        <div class="container mx-auto 2xl:px-0 px-5">
+            <div class="box relative rounded-3xl lg:px-5  lg:py-28"
+                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <div class="hidden lg:flex flex-col gap-5 w-[40%]">
+                    <h2 class="text-5xl font-bold">Savollaringiz bormi ?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae voluptatum error incidunt eum
+                        similique iure exercitationem numquam fuga rerum assumenda laborum
+                    </p>
+                </div>
+                <div class="box lg:absolute -top-16 2xl:right-40 right-20 lg:w-[400px] rounded-3xl px-5 py-10"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                    <h2 class="lg:hidden block sm:text-3xl text-2xl font-bold mb-2">Savollaringiz bormi ?</h2>
+                    <p class="lg:hidden block text-xs mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                        quae voluptatum error incidunt eum
+                        similique iure exercitationem numquam fuga rerum assumenda laborum
+                    </p>
+                    <form class="space-y-4 md:space-y-6" action="#">
+                        <div>
+                            <label for="name" class="block mb-2 sm:text-lg text-sm font-medium ">Ismingiz</label>
+                            <input type="name" name="name" id="name"
+                                class="border text-sm rounded-lg outline-none block w-full p-4 bg-transparent border-[#4ec3e0]  placeholder-gray-400 "
+                                placeholder="Ismingizni yozing" required="" />
+                        </div>
+                        <div>
+                            <label for="telegram" class="block mb-2 sm:text-lg text-sm font-medium">Telegram
+                                username</label>
+                            <input type="text" name="text" id="telegram" placeholder="@username"
+                                class="border outline-none text-sm rounded-lg block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
+                                required="" />
+                        </div>
+                        <div>
+                            <label for="savol" class="block mb-2 sm:text-lg text-sm font-medium">Savolingiz</label>
+                            <textarea name="" id="savol" cols="30" rows="10" placeholder="Savol.."
+                                class="w-full h-24 border outline-none text-sm rounded-lg block p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                            Jo'natish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#4ec3e0] relative lg:mt-40 sm:mt-20 mt-10 z-10 overflow-x-hidden">
         <div class="container mx-auto px-5">
             <div class="items flex items-center justify-between gap-3 py-5" data-v-e33b1926="">
                 <p class="entry text-white sm:text-base text-sm">Birinchi qadam sizdan</p>
@@ -146,21 +195,22 @@ const navbar = useNavStore();
 
 <style lang="css" scoped>
 .items[data-v-e33b1926] {
-  width: -moz-fit-content;
-  width: fit-content;
-  width: -moz-max-content;
-  width: max-content;
-  animation: carouselAnim-e33b1926 10s infinite alternate linear;
-  overflow-x: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    width: -moz-max-content;
+    width: max-content;
+    animation: carouselAnim-e33b1926 10s infinite alternate linear;
+    overflow-x: auto;
 }
 
 @keyframes carouselAnim-e33b1926 {
-  0% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(calc(-100% + 1500px));
-  }
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(calc(-100% + 1500px));
+    }
 }
 
 .hero-title {
