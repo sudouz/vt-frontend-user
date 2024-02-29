@@ -48,7 +48,6 @@ const navbar = useNavStore();
 .area {
     width: 100%;
 }
-
 .circles {
     position: absolute;
     top: 0;
@@ -56,7 +55,7 @@ const navbar = useNavStore();
     bottom: 0;
     width: 100%;
     height: 100vh;
-    /* overflow: hidden; */
+    /* overflow: unset; */
 }
 
 .circles li {
@@ -293,7 +292,7 @@ const navbar = useNavStore();
     }
 
     100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(1500px) rotate(0deg);
         opacity: 1;
         border-radius: 50%;
     }
