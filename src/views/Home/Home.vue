@@ -186,6 +186,68 @@
             </div>
         </div>
     </section>
+
+    <section class="relative z-10 sm:pt-20 pt-10"
+        :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
+        <div class="container mx-auto px-5">
+            <div>
+                <div class="flex items-center justify-between mb-5">
+                    <h2 class="sm:text-4xl text-3xl font-bold">Kurslar</h2>
+                    <button
+                        class="rounded-full bg-[#4ec3e0] sm:text-lg text-sm font-medium text-white py-2 px-7 border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0]">
+                        <router-link to="/kurslar">Ko'proq ko'rish</router-link>
+                    </button>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-5">
+                    <router-link to="/frontend">
+                        <div class="box rounded-3xl p-5 flex gap-5">
+                            <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/frontend.jpg" alt="">
+                            <div class="flex flex-col justify-between gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">Frontend</h3>
+                                    <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit.
+                                        Labore
+                                        assumenda incidunt repudiandae officiis quasi. Laboriosam, assumenda..
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi</span>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bx-play text-lg text-[#4ec3e0]'></i>50 dars</span>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+
+                    <router-link to="/backend">
+                        <div class="box rounded-3xl p-5 flex gap-5">
+                            <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/backend.jpg" alt="">
+                            <div class="flex flex-col justify-between gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">Backend</h3>
+                                    <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit.
+                                        Labore
+                                        assumenda incidunt repudiandae officiis quasi. Laboriosam, assumenda..
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi</span>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bx-play text-lg text-[#4ec3e0]'></i>50 dars</span>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
 </template>
 
 <script setup>
