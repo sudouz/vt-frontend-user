@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container mx-auto 2xl:px-0 px-5">
+        <div class="container mx-auto px-5">
             <div class="2xl:pt-40 pt-40 relative z-10">
                 <div class="box px-5 py-20 rounded-3xl flex items-center justify-center">
                     <div class="flex flex-col items-center  gap-10"
@@ -59,7 +59,7 @@
 
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
-        <div class="container mx-auto 2xl:px-0 px-5">
+        <div class="container mx-auto px-5">
             <div class="box rounded-3xl px-5 py-10"
                 :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                 <h2 class="sm:text-3xl text-2xl font-bold mb-10">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
@@ -114,7 +114,7 @@
 
     <section class="relative z-10 lg:pt-40 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
-        <div class="container mx-auto 2xl:px-0 px-5">
+        <div class="container mx-auto px-5">
             <div class="box relative rounded-3xl lg:px-5  lg:py-28"
                 :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                 <div class="hidden lg:flex flex-col gap-5 w-[40%]">
@@ -134,23 +134,23 @@
                         <div>
                             <label for="name" class="block mb-2 sm:text-lg text-sm font-medium ">Ismingiz</label>
                             <input type="name" name="name" id="name"
-                                class="border text-sm rounded-lg outline-none block w-full p-4 bg-transparent border-[#4ec3e0]  placeholder-gray-400 "
+                                class="border text-sm rounded-full outline-none block w-full p-4 bg-transparent border-[#4ec3e0]  placeholder-gray-400 "
                                 placeholder="Ismingizni yozing" required="" />
                         </div>
                         <div>
                             <label for="telegram" class="block mb-2 sm:text-lg text-sm font-medium">Telegram
                                 username</label>
                             <input type="text" name="text" id="telegram" placeholder="@username"
-                                class="border outline-none text-sm rounded-lg block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
+                                class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
                                 required="" />
                         </div>
                         <div>
                             <label for="savol" class="block mb-2 sm:text-lg text-sm font-medium">Savolingiz</label>
                             <textarea name="" id="savol" cols="30" rows="10" placeholder="Savol.."
-                                class="w-full min-h-24 max-h-24 border outline-none text-sm rounded-lg block p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"></textarea>
+                                class="w-full min-h-24 max-h-24 border outline-none text-sm rounded-2xl block p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"></textarea>
                         </div>
                         <button type="submit"
-                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-full text-sm px-5 py-2.5 text-center">
                             Jo'natish
                         </button>
                     </form>
@@ -192,14 +192,14 @@
         <div class="container mx-auto px-5">
             <div>
                 <div class="flex items-center justify-between mb-5">
-                    <h2 class="sm:text-4xl text-3xl font-bold">Kurslar</h2>
+                    <h2 class="text-3xl font-bold">Kurslar</h2>
                     <button
                         class="rounded-full bg-[#4ec3e0] sm:text-lg text-sm font-medium text-white py-2 px-7 border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0]">
                         <router-link to="/kurslar">Ko'proq ko'rish</router-link>
                     </button>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-5">
-                    <router-link to="/frontend">
+                    <router-link to="/frontend" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <div class="box rounded-3xl p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/frontend.jpg" alt="">
                             <div class="flex flex-col justify-between gap-5">
@@ -221,7 +221,7 @@
                         </div>
                     </router-link>
 
-                    <router-link to="/backend">
+                    <router-link to="/backend" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <div class="box rounded-3xl p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/backend.jpg" alt="">
                             <div class="flex flex-col justify-between gap-5">
@@ -247,21 +247,190 @@
         </div>
     </section>
 
-    
+    <section class="relative z-10 sm:pt-20 pt-10"
+        :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
+        <div class="container mx-auto px-5">
+            <div class="box rounded-3xl p-5 flex flex-col gap-10">
+                <div class="flex items-center justify-between border-b pb-5 border-[#4ec3e0]">
+                    <h2 class="sm:text-3xl text-2xl font-bold">O‘quvchilarning fikrlari</h2>
+                    <div class="lg:flex hidden items-center gap-5">
+                        <button
+                            class="bg-[#4ec3e0] rounded-full h-14 w-14 flex items-center justify-center text-white hover:bg-transparent border border-[#4ec3e0] hover:text-[#4ec3e0]"><i
+                                class='bx bx-chevron-left text-4xl'></i></button>
+                        <button
+                            class="bg-[#4ec3e0] rounded-full h-14 w-14 flex items-center justify-center text-white hover:bg-transparent border border-[#4ec3e0] hover:text-[#4ec3e0]"><i
+                                class='bx bx-chevron-right text-4xl'></i></button>
+                    </div>
+                </div>
+                <div class="lg:flex hidden gap-5 overflow-x-auto pb-5">
+                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
+                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                            <h3 class="text-lg font-bold">John Doe</h3>
+                        </div>
+                        <div class="flex flex-col gap-8">
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
+                                corrupti vitae rem, quo sunt debitis!
+                            </p>
+                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                Ko'proq
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
+                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                            <h3 class="text-lg font-bold">John Doe</h3>
+                        </div>
+                        <div class="flex flex-col gap-8">
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
+                                corrupti vitae rem, quo sunt debitis!
+                            </p>
+                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                Ko'proq
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
+                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                            <h3 class="text-lg font-bold">John Doe</h3>
+                        </div>
+                        <div class="flex flex-col gap-8">
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
+                                corrupti vitae rem, quo sunt debitis!
+                            </p>
+                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                Ko'proq
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
+                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                            <h3 class="text-lg font-bold">John Doe</h3>
+                        </div>
+                        <div class="flex flex-col gap-8">
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
+                                corrupti vitae rem, quo sunt debitis!
+                            </p>
+                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                Ko'proq
+                                <i class='bx bx-chevron-down'></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#4ec3e0] relative sm:mt-20 mt-10 z-10 overflow-x-hidden">
+        <div class="container mx-auto px-5">
+            <div class="items flex items-center justify-between gap-3 py-5" data-v-e33b1926="">
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+                <p class="entry text-white sm:text-base text-sm">•</p>
+                <p class="entry text-white sm:text-base text-sm">Bir marta to'lang va har doim foydalaning</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative z-10 lg:pt-40 sm:pt-20 pt-10 lg:pb-40 pb-10"
+        :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
+        <div class="container mx-auto px-5">
+            <div class="box relative rounded-3xl lg:px-5  lg:py-28"
+                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <div class="hidden lg:flex flex-col gap-5 w-[60%]">
+                    <h2 class="text-5xl font-bold">Biz bilan bog'lanmoqchimisiz ?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae voluptatum error incidunt eum
+                        similique iure exercitationem numquam fuga rerum assumenda laborum
+                    </p>
+                </div>
+                <div class="box lg:absolute -top-16 2xl:right-40 right-20 lg:w-[400px] rounded-3xl px-5 py-10"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                    <h2 class="lg:hidden block sm:text-3xl text-2xl font-bold mb-2">Biz bilan bog'lanmoqchimisiz ?</h2>
+                    <p class="lg:hidden block text-xs mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                        quae voluptatum error incidunt eum
+                        similique iure exercitationem numquam fuga rerum assumenda laborum
+                    </p>
+                    <form class="space-y-4 md:space-y-6" action="#">
+                        <div>
+                            <label for="name" class="block mb-2 sm:text-lg text-sm font-medium ">Ismingiz</label>
+                            <input type="name" name="name" id="name"
+                                class="border text-sm rounded-full outline-none block w-full p-4 bg-transparent border-[#4ec3e0]  placeholder-gray-400 "
+                                placeholder="Ismingizni yozing" required="" />
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2 sm:text-lg text-sm font-medium">Telefon raqamingiz</label>
+                            <input type="text" name="text" id="phone" placeholder="+998"
+                                class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
+                                required="" />
+                        </div>
+                        <div>
+                            <label for="telegram" class="block mb-2 sm:text-lg text-sm font-medium">Telegram
+                                username</label>
+                            <input type="text" name="text" id="telegram" placeholder="@username"
+                                class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
+                                required="" />
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-full text-sm px-5 py-2.5 text-center">
+                            Jo'natish
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script setup>
 import { useNavStore } from "../../stores/toggle";
+import { ref } from "vue";
 const navbar = useNavStore();
+const modal = ref(false);
+const openModal = () => (modal.value = !modal.value);
 </script>
 
 <style lang="css" scoped>
+button {
+    transition: 0.5s;
+}
+
 .items[data-v-e33b1926] {
     width: -moz-fit-content;
     width: fit-content;
     width: -moz-max-content;
     width: max-content;
-    animation: carouselAnim-e33b1926 10s infinite alternate linear;
+    animation: carouselAnim-e33b1926 15s infinite alternate linear;
     overflow-x: auto;
 }
 
