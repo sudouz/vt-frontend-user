@@ -140,7 +140,7 @@
                         <div>
                             <label for="telegram" class="block mb-2 sm:text-lg text-sm font-medium">Telegram
                                 username</label>
-                            <input type="text" name="text" id="telegram" placeholder="@username"
+                            <input type="username" name="username" id="telegram" placeholder="@username"
                                 class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
                                 required="" />
                         </div>
@@ -390,14 +390,14 @@
                         </div>
                         <div>
                             <label for="phone" class="block mb-2 sm:text-lg text-sm font-medium">Telefon raqamingiz</label>
-                            <input type="text" name="text" id="phone" placeholder="+998"
+                            <input type="tel" name="tel" id="phone" placeholder="+998"
                                 class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
                                 required="" />
                         </div>
                         <div>
                             <label for="telegram" class="block mb-2 sm:text-lg text-sm font-medium">Telegram
                                 username</label>
-                            <input type="text" name="text" id="telegram" placeholder="@username"
+                            <input type="username" name="username" id="telegram" placeholder="@username"
                                 class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
                                 required="" />
                         </div>
