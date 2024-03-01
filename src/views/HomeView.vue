@@ -29,6 +29,9 @@
             <li></li>
             <li></li>
         </ul>
+
+    <main class="min-h-screen " :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+ main
         <router-view></router-view>
     </main>
     <Footer />
@@ -326,6 +329,4 @@ const navbar = useNavStore();
         opacity: 1;
         border-radius: 50%;
     }
-
-}
 </style>
