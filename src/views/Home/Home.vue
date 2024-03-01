@@ -425,7 +425,7 @@
                     </swiper>
                 </div>
 
-                <div class="sm:block lg:hidden">
+                <div class="sm:block lg:hidden hidden">
                     <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="2" :space-between="20"
                         :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
                         @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
