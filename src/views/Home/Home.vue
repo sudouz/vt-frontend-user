@@ -1,5 +1,4 @@
 <template>
-    
     <section>
         <div class="container mx-auto px-5">
             <div class="2xl:pt-40 pt-40 relative z-10">

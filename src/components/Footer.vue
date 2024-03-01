@@ -1,5 +1,5 @@
 <template>
-    <footer class="w-full border-t border-[#4ec3e0]"
+    <footer class="w-full relative z-20 border-t border-[#4ec3e0]"
         :class="{ 'bg-[#12111F] text-white': navbar.userNav, 'bg-white text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <nav class="py-5 flex md:flex-row flex-col md:items-center items-end justify-between">
