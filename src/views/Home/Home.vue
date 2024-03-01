@@ -314,7 +314,8 @@
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box rounded-3xl px-5 pt-5 sm:pb-5 pb-0 flex flex-col gap-10">
+            <div class="box rounded-3xl px-5 pt-5 sm:pb-5 pb-0 flex flex-col gap-10"
+                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                 <div class="flex items-center justify-between">
                     <h2 class="sm:text-3xl text-2xl font-bold">O‘quvchilarning fikrlari</h2>
                     <div class="lg:flex hidden items-center gap-5">
@@ -328,7 +329,7 @@
                 </div>
 
                 <div class="lg:block hidden">
-                    <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="3" :space-between="20"  
+                    <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="3" :space-between="20"
                         :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
                         @slideChange="onSlideChange" :autoplay="{ delay: 5000 }">
                         <swiper-slide class="pb-10">
