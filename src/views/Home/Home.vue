@@ -314,8 +314,8 @@
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box rounded-3xl p-5 flex flex-col gap-10">
-                <div class="flex items-center justify-between border-b pb-5 border-[#4ec3e0]">
+            <div class="box rounded-3xl px-5 pt-5 sm:pb-5 pb-0 flex flex-col gap-10">
+                <div class="flex items-center justify-between">
                     <h2 class="sm:text-3xl text-2xl font-bold">O‘quvchilarning fikrlari</h2>
                     <div class="lg:flex hidden items-center gap-5">
                         <button
@@ -326,78 +326,299 @@
                                 class='bx bx-chevron-right text-4xl'></i></button>
                     </div>
                 </div>
-                <div class="lg:flex hidden gap-5 overflow-x-auto pb-5">
-                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
-                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
-                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
-                            <h3 class="text-lg font-bold">John Doe</h3>
-                        </div>
-                        <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                                suscipit dolorem officiis
-                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
-                                corrupti vitae rem, quo sunt debitis!
-                            </p>
-                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
-                                Ko'proq
-                                <i class='bx bx-chevron-down'></i>
-                            </button>
-                        </div>
-                    </div>
 
-                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
-                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
-                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
-                            <h3 class="text-lg font-bold">John Doe</h3>
-                        </div>
-                        <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                                suscipit dolorem officiis
-                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
-                                corrupti vitae rem, quo sunt debitis!
-                            </p>
-                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
-                                Ko'proq
-                                <i class='bx bx-chevron-down'></i>
-                            </button>
-                        </div>
-                    </div>
+                <div class="lg:block hidden">
+                    <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="3" :space-between="20"  
+                        :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
+                        @slideChange="onSlideChange" :autoplay="{ delay: 5000 }">
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
 
-                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
-                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
-                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
-                            <h3 class="text-lg font-bold">John Doe</h3>
-                        </div>
-                        <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                                suscipit dolorem officiis
-                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
-                                corrupti vitae rem, quo sunt debitis!
-                            </p>
-                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
-                                Ko'proq
-                                <i class='bx bx-chevron-down'></i>
-                            </button>
-                        </div>
-                    </div>
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
 
-                    <div class="box rounded-3xl min-w-[30%] max-w-[30%] p-5 flex flex-col gap-5">
-                        <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
-                            <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
-                            <h3 class="text-lg font-bold">John Doe</h3>
-                        </div>
-                        <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                                suscipit dolorem officiis
-                                in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
-                                corrupti vitae rem, quo sunt debitis!
-                            </p>
-                            <button class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
-                                Ko'proq
-                                <i class='bx bx-chevron-down'></i>
-                            </button>
-                        </div>
-                    </div>
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </swiper>
+                </div>
+
+                <div class="sm:block lg:hidden">
+                    <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="2" :space-between="20"
+                        :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
+                        @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </swiper>
+                </div>
+
+                <div class="sm:hidden">
+                    <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="1" :space-between="20"
+                        :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
+                        @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                                <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
+                                    <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
+                                    <h3 class="text-lg font-bold">John Doe</h3>
+                                </div>
+                                <div class="flex flex-col gap-8">
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam
+                                        suscipit dolorem officiis
+                                        in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
+                                        optio
+                                        corrupti vitae rem, quo sunt debitis!
+                                    </p>
+                                    <button
+                                        class="sm:text-lg text-sm flex items-center justify-between font-medium text-[#4ec3e0]">
+                                        Ko'proq
+                                        <i class='bx bx-chevron-down'></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </swiper>
                 </div>
             </div>
         </div>
@@ -483,7 +704,7 @@
 <script>
 import { useNavStore } from "../../stores/toggle";
 import { ref } from "vue";
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -498,7 +719,7 @@ export default {
         SwiperSlide,
     },
     setup() {
-        // const navbar = useNavStore();
+        const swiper = useSwiper();
         const onSwiper = (swiper) => {
 
             console.log(swiper);
@@ -510,6 +731,7 @@ export default {
             onSwiper,
             onSlideChange,
             navbar,
+            swiper,
             modules: [Navigation, Pagination, A11y, Autoplay]
         };
     },
@@ -517,11 +739,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
-@keyframes swiper-preloader-spin {
+/* @keyframes swiper-preloader-spin {
     to {
         transform: rotate(1turn)
     }
-}
+} */
 
 .items[data-v-e33b1926] {
     width: -moz-fit-content;
@@ -563,4 +785,5 @@ export default {
     50% {
         opacity: 1;
     }
-}</style>
+}
+</style>
