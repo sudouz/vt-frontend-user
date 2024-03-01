@@ -60,10 +60,10 @@
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box rounded-3xl px-5 py-10"
+            <div class="box rounded-3xl px-5 pt-10 sm:pb-10 pb-0"
                 :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                 <h2 class="sm:text-3xl text-2xl font-bold mb-10">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
-                <div class="grid lg:grid-cols-2 gap-5">
+                <div class="hidden sm:grid lg:grid-cols-2 gap-5">
                     <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
                         <i
                             class='bx bxs-graduation sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
@@ -107,6 +107,68 @@
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <div class="sm:hidden">
+                    <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="1" :space-between="50"
+                        :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
+                        @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                                <i
+                                    class='bx bxs-graduation sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
+                                <div class="flex flex-col gap-3 ">
+                                    <h3 class="sm:text-2xl text-xl font-bold">Sifatli ta'lim</h3>
+                                    <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit.
+                                        Corporis illo culpa unde
+                                    </p>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                                <i
+                                    class='bx bx-brain sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
+                                <div class="flex flex-col gap-3 ">
+                                    <h3 class="sm:text-2xl text-xl font-bold">Bepul mahorat darslari</h3>
+                                    <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit.
+                                        Corporis illo culpa unde
+                                    </p>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                                <i
+                                    class='bx bx-globe sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
+                                <div class="flex flex-col gap-3 ">
+                                    <h3 class="sm:text-2xl text-xl font-bold">24/7 aloqa</h3>
+                                    <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit.
+                                        Corporis illo culpa unde
+                                    </p>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+                        <swiper-slide class="pb-10">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                                <i
+                                    class='bx bxs-credit-card sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
+                                <div class="flex flex-col gap-3 ">
+                                    <h3 class="sm:text-2xl text-xl font-bold">Arzon narxlar</h3>
+                                    <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                        elit.
+                                        Corporis illo culpa unde
+                                    </p>
+                                </div>
+                            </div>
+                        </swiper-slide>
+                    </swiper>
                 </div>
             </div>
         </div>
@@ -199,8 +261,9 @@
                     </button>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-5">
-                    <router-link to="/frontend" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
-                        <div class="box rounded-3xl p-5 flex gap-5">
+                    <router-link to="/frontend" class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/frontend.jpg" alt="">
                             <div class="flex flex-col justify-between gap-5">
                                 <div class="flex flex-col gap-2">
@@ -221,8 +284,9 @@
                         </div>
                     </router-link>
 
-                    <router-link to="/backend" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
-                        <div class="box rounded-3xl p-5 flex gap-5">
+                    <router-link to="/backend" class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/backend.jpg" alt="">
                             <div class="flex flex-col justify-between gap-5">
                                 <div class="flex flex-col gap-2">
@@ -269,7 +333,8 @@
                             <h3 class="text-lg font-bold">John Doe</h3>
                         </div>
                         <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                suscipit dolorem officiis
                                 in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
                                 corrupti vitae rem, quo sunt debitis!
                             </p>
@@ -286,7 +351,8 @@
                             <h3 class="text-lg font-bold">John Doe</h3>
                         </div>
                         <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                suscipit dolorem officiis
                                 in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
                                 corrupti vitae rem, quo sunt debitis!
                             </p>
@@ -303,7 +369,8 @@
                             <h3 class="text-lg font-bold">John Doe</h3>
                         </div>
                         <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                suscipit dolorem officiis
                                 in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
                                 corrupti vitae rem, quo sunt debitis!
                             </p>
@@ -320,7 +387,8 @@
                             <h3 class="text-lg font-bold">John Doe</h3>
                         </div>
                         <div class="flex flex-col gap-8">
-                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit dolorem officiis
+                            <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                                suscipit dolorem officiis
                                 in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae optio
                                 corrupti vitae rem, quo sunt debitis!
                             </p>
@@ -412,17 +480,47 @@
     </section>
 </template>
 
-<script setup>
+<script>
 import { useNavStore } from "../../stores/toggle";
 import { ref } from "vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 const navbar = useNavStore();
 const modal = ref(false);
 const openModal = () => (modal.value = !modal.value);
+
+export default {
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    setup() {
+        // const navbar = useNavStore();
+        const onSwiper = (swiper) => {
+
+            console.log(swiper);
+        };
+        const onSlideChange = () => {
+            console.log('slide change');
+        };
+        return {
+            onSwiper,
+            onSlideChange,
+            navbar,
+            modules: [Navigation, Pagination, A11y, Autoplay]
+        };
+    },
+};
 </script>
 
 <style lang="css" scoped>
-button {
-    transition: 0.5s;
+@keyframes swiper-preloader-spin {
+    to {
+        transform: rotate(1turn)
+    }
 }
 
 .items[data-v-e33b1926] {
@@ -465,5 +563,4 @@ button {
     50% {
         opacity: 1;
     }
-}
-</style>
+}</style>
