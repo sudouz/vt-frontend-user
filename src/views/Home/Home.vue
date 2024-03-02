@@ -16,7 +16,7 @@
                         </div>
                         <button
                             class="rounded-full bg-[#4ec3e0] text-lg font-medium text-white py-2 px-7 border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0]">
-                            <router-link to="/kurslar">Kurslarni korish</router-link>
+                            <router-link to="/courses">Kurslarni korish</router-link>
                         </button>
                     </div>
                 </div>
@@ -264,11 +264,11 @@
                     <h2 class="text-3xl font-bold">Kurslar</h2>
                     <button
                         class="rounded-full bg-[#4ec3e0] sm:text-lg text-sm font-medium text-white py-2 px-7 border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0]">
-                        <router-link to="/kurslar">Ko'proq ko'rish</router-link>
+                        <router-link to="/courses">Ko'proq ko'rish</router-link>
                     </button>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-5">
-                    <router-link to="/frontend" class="box rounded-3xl"
+                    <router-link to="/courses" class="box rounded-3xl"
                         :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <div class="p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/frontend.jpg" alt="">
@@ -291,7 +291,7 @@
                         </div>
                     </router-link>
 
-                    <router-link to="/backend" class="box rounded-3xl"
+                    <router-link to="/courses" class="box rounded-3xl"
                         :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <div class="p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/backend.jpg" alt="">

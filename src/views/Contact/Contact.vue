@@ -353,14 +353,14 @@
 import { useNavStore } from "../../stores/toggle";
 import { ref } from "vue";
 const navbar = useNavStore();
-let modal = ref([false]);
+let modal = ref([]);
+for (let i = 0; i < 10; i++){
+    modal.value.push(false)
+}
 const toggleModal = (id) => {
     if(modal.value.length-1 >= id){
         modal.value[id] = !modal.value[id]
         console.log(modal);
-    }
-    else {
-        modal.value.push(true)
     }
     console.log(modal.value.length);
 }

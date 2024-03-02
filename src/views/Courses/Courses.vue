@@ -1,8 +1,8 @@
 <template>
-    <ChildHeaderVue class="pt-40"/>
-   <section class="relative z-10">
-    
-   </section>t
+    <ChildHeaderVue class="pt-40" />
+    <section class="relative z-10">
+
+    </section>t
 </template>
 
 <script setup>
