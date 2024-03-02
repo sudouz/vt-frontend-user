@@ -17,7 +17,7 @@
               <router-link to="/">Bosh sahifa</router-link>
             </li>
             <li class="font-medium hover:text-[#4ec3e0]">
-              <router-link to="/kurslar">Kurslar</router-link>
+              <router-link to="/courses">Kurslar</router-link>
             </li>
             <li class="font-medium hover:text-[#4ec3e0]">
               <router-link to="/contact">Bog'lanish</router-link>
@@ -52,7 +52,7 @@
                       <router-link to="/">Bosh sahifa</router-link>
                     </li>
                     <li class="font-medium hover:text-[#4ec3e0]">
-                      <router-link to="/kurslar">Kurslar</router-link>
+                      <router-link to="/courses">Kurslar</router-link>
                     </li>
                     <li class="font-medium hover:text-[#4ec3e0]">
                       <router-link to="/contact">Bog'lanish</router-link>

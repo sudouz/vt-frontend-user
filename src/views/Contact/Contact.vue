@@ -52,7 +52,7 @@
         <div class="container mx-auto px-5">
             <div class="wrapper">
                 <h1 class="font-bold sm:text-3xl text-2xl mb-5">Ko'p so'raladigan savollar</h1>
-                <div class="grid lg:grid-cols-2 gap-5" id="accordion-collapse" data-accordion="collapse">
+                <div class="flex flex-col gap-5" id="accordion-collapse" data-accordion="collapse">
                     <div class="box rounded-3xl flex flex-col gap-3"
                         :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <h2 id="accordion-collapse-heading-1">
