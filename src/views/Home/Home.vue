@@ -740,11 +740,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-/* @keyframes swiper-preloader-spin {
-    to {
-        transform: rotate(1turn)
-    }
-} */
 
 .items[data-v-e33b1926] {
     width: -moz-fit-content;

@@ -43,7 +43,7 @@ const navbar = useNavStore();
 
 </script>
   
-<style>
+<style scoped>
 .area {
     width: 100%;
     height: 100%;

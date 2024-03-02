@@ -20,7 +20,7 @@
               <router-link to="/kurslar">Kurslar</router-link>
             </li>
             <li class="font-medium hover:text-[#4ec3e0]">
-              <router-link to="/boglanich">Bog'lanish</router-link>
+              <router-link to="/contact">Bog'lanish</router-link>
             </li>
           </ul>
           <div class="flex items-center gap-5 lg:border-l lg:pl-5 border-[#4ec3e0]">
@@ -55,7 +55,7 @@
                       <router-link to="/kurslar">Kurslar</router-link>
                     </li>
                     <li class="font-medium hover:text-[#4ec3e0]">
-                      <router-link to="/boglanich">Bog'lanish</router-link>
+                      <router-link to="/contact">Bog'lanish</router-link>
                     </li>
                     <router-link to="/login"
                       class="login px-7 py-2 border border-[#4ec3e0] font-medium rounded-full bg-transparent hover:bg-[#4ec3e0] text-[#4ec3e0] hover:text-white">Kirish</router-link>
