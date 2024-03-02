@@ -1,5 +1,5 @@
 <template>
-    <section class="relative z-10 lg:pt-60 sm:pt-20 pt-10"
+    <section class="relative z-10 lg:pt-60 pt-40"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <div class="box relative rounded-3xl lg:px-5  lg:py-28"

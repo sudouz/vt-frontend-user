@@ -13,7 +13,7 @@
                             <router-link to="/kurslar">Kurslar</router-link>
                         </li>
                         <li class="font-medium md:text-[16px] text-sm hover:text-[#4ec3e0]">
-                            <router-link to="/boglanich">Bog'lanish</router-link>
+                            <router-link to="/contact">Bog'lanish</router-link>
                         </li>
                     </ul>
                 </div>

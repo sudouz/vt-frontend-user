@@ -60,11 +60,11 @@
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box rounded-3xl px-5 pt-10 sm:pb-10 pb-0"
-                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
-                <h2 class="sm:text-3xl text-2xl font-bold mb-10">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
+            <div class="">
+                <h2 class="sm:text-3xl text-2xl font-bold mb-5">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
                 <div class="hidden sm:grid lg:grid-cols-2 gap-5">
-                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <i
                             class='bx bxs-graduation sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                         <div class="flex flex-col gap-3 ">
@@ -75,7 +75,8 @@
                         </div>
                     </div>
 
-                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <i
                             class='bx bx-brain sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                         <div class="flex flex-col gap-3 ">
@@ -86,7 +87,8 @@
                         </div>
                     </div>
 
-                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <i
                             class='bx bx-globe sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                         <div class="flex flex-col gap-3 ">
@@ -97,7 +99,8 @@
                         </div>
                     </div>
 
-                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                    <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <i
                             class='bx bxs-credit-card sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                         <div class="flex flex-col gap-3 ">
@@ -114,7 +117,8 @@
                         :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
                         @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <i
                                     class='bx bxs-graduation sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                                 <div class="flex flex-col gap-3 ">
@@ -128,7 +132,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <i
                                     class='bx bx-brain sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                                 <div class="flex flex-col gap-3 ">
@@ -142,7 +147,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <i
                                     class='bx bx-globe sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                                 <div class="flex flex-col gap-3 ">
@@ -156,7 +162,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3">
+                            <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <i
                                     class='bx bxs-credit-card sm:min-w-20 sm:max-w-20 sm:min-h-20 sm:max-h-20 min-w-14 max-w-14 min-h-14 max-h-14 sm:text-5xl text-4xl bg-[#4ec3e0] rounded-full flex items-center justify-center text-white'></i>
                                 <div class="flex flex-col gap-3 ">
@@ -314,26 +321,16 @@
     <section class="relative z-10 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box rounded-3xl px-5 pt-5 sm:pb-5 pb-0 flex flex-col gap-10"
-                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
-                <div class="flex items-center justify-between">
-                    <h2 class="sm:text-3xl text-2xl font-bold">O‘quvchilarning fikrlari</h2>
-                    <div class="lg:flex hidden items-center gap-5">
-                        <button
-                            class="bg-[#4ec3e0] rounded-full h-14 w-14 flex items-center justify-center text-white hover:bg-transparent border border-[#4ec3e0] hover:text-[#4ec3e0]"><i
-                                class='bx bx-chevron-left text-4xl'></i></button>
-                        <button
-                            class="bg-[#4ec3e0] rounded-full h-14 w-14 flex items-center justify-center text-white hover:bg-transparent border border-[#4ec3e0] hover:text-[#4ec3e0]"><i
-                                class='bx bx-chevron-right text-4xl'></i></button>
-                    </div>
-                </div>
+            <div class="pt-5 sm:pb-5 pb-0 flex flex-col gap-5">
+                <h2 class="sm:text-3xl text-2xl font-bold">O‘quvchilarning fikrlari</h2>
 
                 <div class="lg:block hidden">
                     <swiper class="swiper-preloader-spin" :modules="modules" :slides-per-view="3" :space-between="20"
-                        :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
-                        @slideChange="onSlideChange" :autoplay="{ delay: 5000 }">
+                        :pagination="{ clickable: true }" :autoplay="{ delay: 3000 }" :scrollbar="{ draggable: true }"
+                        @swiper="onSwiper" @slideChange="onSlideChange">
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -356,7 +353,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -379,7 +377,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -402,7 +401,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -431,7 +431,8 @@
                         :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
                         @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -454,7 +455,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -477,7 +479,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -500,7 +503,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -529,7 +533,8 @@
                         :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
                         @slideChange="onSlideChange" :autoplay="{ delay: 3000 }">
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -552,7 +557,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -575,7 +581,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -598,7 +605,8 @@
                         </swiper-slide>
 
                         <swiper-slide class="pb-10">
-                            <div class="box rounded-3xl p-5 flex flex-col gap-5">
+                            <div class="box rounded-3xl p-5 flex flex-col gap-5"
+                                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                                 <div class="flex items-center gap-3 border-b pb-5 border-[#4ec3e0]">
                                     <img class="w-16 h-16 rounded-full" src="/user.png" alt="">
                                     <h3 class="text-lg font-bold">John Doe</h3>
@@ -740,7 +748,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 .items[data-v-e33b1926] {
     width: -moz-fit-content;
     width: fit-content;
@@ -781,5 +788,4 @@ export default {
     50% {
         opacity: 1;
     }
-}
-</style>
+}</style>
