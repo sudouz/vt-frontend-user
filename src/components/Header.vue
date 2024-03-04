@@ -17,7 +17,7 @@
               <router-link to="/">Bosh sahifa</router-link>
             </li>
             <li class="font-medium hover:text-[#4ec3e0]">
-              <router-link to="/courses">Kurslar</router-link>
+              <router-link  @click="click" to="/courses">Kurslar</router-link>
             </li>
             <li class="font-medium hover:text-[#4ec3e0]">
               <router-link to="/contact">Bog'lanish</router-link>
@@ -52,7 +52,7 @@
                       <router-link to="/">Bosh sahifa</router-link>
                     </li>
                     <li class="font-medium hover:text-[#4ec3e0]">
-                      <router-link to="/courses">Kurslar</router-link>
+                      <router-link @click="click" to="/courses">Kurslar</router-link>
                     </li>
                     <li class="font-medium hover:text-[#4ec3e0]">
                       <router-link to="/contact">Bog'lanish</router-link>
@@ -79,6 +79,11 @@ import { useSidebarStore } from "../stores/sidebar";
 const navbar = useNavStore();
 const sidebar = useSidebarStore();
 const openModal = () => (sidebar.sidebar = !sidebar.sidebar);
+
+const click = () => {
+  localStorage.clear("active")
+  console.log("hello");
+}
 </script>
 
 <style lang="css" scoped>

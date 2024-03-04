@@ -15,6 +15,8 @@ const navbar = useNavStore();
 
 </script>
   
-<style scoped>
-
+<style >
+button {
+  transition: 0.5s;
+}
 </style>

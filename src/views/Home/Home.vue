@@ -59,6 +59,7 @@
             <li></li>
         </ul>
     </div>
+
     <section>
         <div class="container mx-auto px-5">
             <div class="2xl:pt-40 pt-40 relative z-10">
@@ -121,7 +122,7 @@
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <div class="">
-                <h2 class="sm:text-3xl text-2xl font-bold mb-5">Nima uchun "Virtual Ta'lim" da o’qish kerak ?</h2>
+                <h2 class="sm:text-3xl text-2xl font-bold mb-5">"Virtual Ta'lim" ning avzaliklari</h2>
                 <div class="hidden sm:grid lg:grid-cols-2 gap-5">
                     <div class="box rounded-3xl p-10 flex sm:flex-row flex-col sm:items-center sm:gap-5 gap-3"
                         :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
@@ -328,12 +329,12 @@
                     </button>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-5">
-                    <router-link to="/courses" class="box rounded-3xl"
+                    <button @click="frontend" class="box rounded-3xl"
                         :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <div class="p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/frontend.jpg" alt="">
                             <div class="flex flex-col justify-between gap-5">
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col text-start gap-2">
                                     <h3 class="text-2xl font-bold">Frontend</h3>
                                     <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
                                         elit.
@@ -349,14 +350,14 @@
                                 </div>
                             </div>
                         </div>
-                    </router-link>
+                    </button>
 
-                    <router-link to="/courses" class="box rounded-3xl"
+                    <button @click="backend" class="box rounded-3xl"
                         :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                         <div class="p-5 flex gap-5">
                             <img class="sm:block hidden w-40 h-40 rounded-3xl" src="/backend.jpg" alt="">
                             <div class="flex flex-col justify-between gap-5">
-                                <div class="flex flex-col gap-2">
+                                <div class="flex flex-col text-start gap-2">
                                     <h3 class="text-2xl font-bold">Backend</h3>
                                     <p class="sm:text-base text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing
                                         elit.
@@ -372,7 +373,7 @@
                                 </div>
                             </div>
                         </div>
-                    </router-link>
+                    </button>
                 </div>
             </div>
         </div>
@@ -773,14 +774,15 @@
 <script>
 import { useNavStore } from "../../stores/toggle";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-const navbar = useNavStore();
-const modal = ref(false);
-const openModal = () => (modal.value = !modal.value);
+// const modal = ref(false);
+// const openModal = () => (modal.value = !modal.value);
+
 
 export default {
     components: {
@@ -789,17 +791,31 @@ export default {
     },
     setup() {
         const swiper = useSwiper();
+        const navbar = useNavStore();
+        const router = useRouter();
         const onSwiper = (swiper) => {
-
             console.log(swiper);
         };
         const onSlideChange = () => {
             console.log('slide change');
         };
+
+        const frontend = () => {
+            localStorage.setItem("active", "frontend");
+            router.push("/courses");
+        }
+
+        const backend = () => {
+            localStorage.setItem("active", "backend");
+            router.push("/courses");
+        }
         return {
             onSwiper,
             onSlideChange,
             navbar,
+            frontend,
+            backend,
+            router,
             swiper,
             modules: [Navigation, Pagination, A11y, Autoplay]
         };
@@ -849,8 +865,9 @@ export default {
         opacity: 1;
     }
 
-    
+
 }
+
 .area {
     width: 100%;
     height: 100%;
@@ -1048,7 +1065,7 @@ export default {
     width: 55px;
     height: 60px;
     animation-delay: 3s;
-    animation-duration:40s;
+    animation-duration: 40s;
 }
 
 .circles li:nth-child(23) {
@@ -1099,47 +1116,58 @@ export default {
         opacity: 0;
         border-radius: 5%;
     }
-    10%{
+
+    10% {
         opacity: 0.2;
         border-radius: 20%;
     }
-    20%{
+
+    20% {
         opacity: 0.3;
         border-radius: 20%;
     }
-    30%{
+
+    30% {
         opacity: 0.4;
         border-radius: 20%;
     }
-    40%{
+
+    40% {
         opacity: 0.5;
         border-radius: 20%;
     }
-    50%{
+
+    50% {
         opacity: 0.6;
     }
-    60%{
+
+    60% {
         opacity: 0.7;
     }
-    70%{
+
+    70% {
         opacity: 0.8;
     }
-    80%{
+
+    80% {
 
         opacity: 0.9;
     }
+
     100% {
         transform: translateY(3820px) rotate(720deg);
         opacity: 1;
         border-radius: 50%;
     }
 }
-.area-mobile{
+
+.area-mobile {
     display: none;
     width: 100%;
     height: 100%;
 }
-.circles-mobile{
+
+.circles-mobile {
     position: absolute;
     top: 0;
     left: 0;
@@ -1147,7 +1175,8 @@ export default {
     width: 100%;
     height: 100vh;
 }
-.circles-mobile li{
+
+.circles-mobile li {
     position: absolute;
     display: block;
     list-style: none;
@@ -1329,7 +1358,7 @@ export default {
     width: 55px;
     height: 60px;
     animation-delay: 3s;
-    animation-duration:40s;
+    animation-duration: 40s;
 }
 
 .circles-mobile li:nth-child(23) {
@@ -1374,52 +1403,63 @@ export default {
 
 @keyframes animate-mobile {
 
-0% {
-    transform: translateY(10px) rotate(0deg);
-    opacity: 0;
-    border-radius: 5%;
-}
-10%{
-    opacity: 0.2;
-    border-radius: 20%;
-}
-20%{
-    opacity: 0.3;
-    border-radius: 20%;
-}
-30%{
-    opacity: 0.4;
-    border-radius: 20%;
-}
-40%{
-    opacity: 0.5;
-    border-radius: 20%;
-}
-50%{
-    opacity: 0.6;
-}
-60%{
-    opacity: 0.7;
-}
-70%{
-    opacity: 0.8;
-}
-80%{
+    0% {
+        transform: translateY(10px) rotate(0deg);
+        opacity: 0;
+        border-radius: 5%;
+    }
 
-    opacity: 0.9;
+    10% {
+        opacity: 0.2;
+        border-radius: 20%;
+    }
+
+    20% {
+        opacity: 0.3;
+        border-radius: 20%;
+    }
+
+    30% {
+        opacity: 0.4;
+        border-radius: 20%;
+    }
+
+    40% {
+        opacity: 0.5;
+        border-radius: 20%;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    60% {
+        opacity: 0.7;
+    }
+
+    70% {
+        opacity: 0.8;
+    }
+
+    80% {
+
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(3000px) rotate(720deg);
+        opacity: 1;
+        border-radius: 50%;
+    }
 }
-100% {
-    transform: translateY(3000px) rotate(720deg);
-    opacity: 1;
-    border-radius: 50%;
-}
-}
-@media(max-width:650px){
-    .area-mobile{
+
+@media(max-width:650px) {
+    .area-mobile {
         display: block;
     }
-    .area{
-        display:none;
+
+    .area {
+        display: none;
     }
 }
 </style>
