@@ -9,13 +9,16 @@
                         type="search" placeholder="Izlash">
                 </div>
                 <div class="flex flex-wrap items-center gap-5">
-                    <button @click="activeClick(active = 'barchasi')" :id="active == 'barchasi' ? 'active' : ''" :class="{ 'border-white ': navbar.userNav, 'border-[#12111F]': !navbar.userNav }"
+                    <button @click="active = 'barchasi'" :id="active == 'barchasi' ? 'active' : ''"
+                        :class="{ 'border-white ': navbar.userNav, 'border-[#12111F]': !navbar.userNav }"
                         class="border px-7 py-3 rounded-full hover:border-[#4ec3e0] hover:text-[#4ec3e0]">Barchasi
                     </button>
-                    <button @click="activeClick(active = 'frontend')" :id="active == 'frontend' ? 'active' : ''" :class="{ 'border-white ': navbar.userNav, 'border-[#12111F]': !navbar.userNav }"
+                    <button @click="active = 'frontend'" :id="active == 'frontend' ? 'active' : ''"
+                        :class="{ 'border-white ': navbar.userNav, 'border-[#12111F]': !navbar.userNav }"
                         class="border px-7 py-3 rounded-full hover:border-[#4ec3e0] hover:text-[#4ec3e0]">Frontend
                     </button>
-                    <button @click="activeClick(active = 'backend')" :id="active == 'backend' ? 'active' : ''" :class="{ 'border-white ': navbar.userNav, 'border-[#12111F]': !navbar.userNav }"
+                    <button @click="active = 'backend'" :id="active == 'backend' ? 'active' : ''"
+                        :class="{ 'border-white ': navbar.userNav, 'border-[#12111F]': !navbar.userNav }"
                         class="border px-7 py-3 rounded-full hover:border-[#4ec3e0] hover:text-[#4ec3e0]">Backend
                     </button>
                 </div>
@@ -27,8 +30,8 @@
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <div class="grid lg:grid-cols-3 gap-5">
-                <router-link to="/courses" :id="frontend ? '' : 'hidden'" class="box rounded-3xl"
-                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link to="/courses" :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
+                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://www.kaashivinfotech.com/blog/wp-content/uploads/2023/10/html-css-beginners.jpg"
@@ -45,8 +48,8 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="frontend ? '' : 'hidden'" class="box rounded-3xl"
-                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link to="/courses" :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
+                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png"
@@ -63,8 +66,8 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="frontend ? '' : 'hidden'" class="box rounded-3xl"
-                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link to="/courses" :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
+                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWGUUWRbIn8130p33QdtMYw6heRWTQI0xFxQ&usqp=CAU"
@@ -81,8 +84,8 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="backend ? '' : 'hidden'" class="box rounded-3xl"
-                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link to="/courses" :id="active == 'backend' || active == 'barchasi' ? '' : 'hidden'"
+                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://www.loginradius.com/blog/static/6ee159acf6c294342ec04f86aede5d14/701ee/coverImage.jpg"
@@ -99,8 +102,8 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="backend ? '' : 'hidden'" class="box rounded-3xl"
-                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link to="/courses" :id="active == 'backend' || active == 'barchasi' ? '' : 'hidden'"
+                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://miro.medium.com/v2/resize:fit:1358/0*1VyCqSN0pdtXitey.jpg" alt="">
@@ -128,20 +131,10 @@ const frontend = ref(true);
 const backend = ref(true);
 const active = ref("barchasi")
 
-const activeClick = () => {
-    localStorage.setItem("active", `${active.value}`)
-    location.reload()
-}
-
 const lamp = localStorage.getItem("active")
 
-if(lamp == "frontend"){
-    active.value = "frontend"
-    backend.value = false
-}
-else if (lamp == "backend") {
-    active.value = "backend"
-    frontend.value = false
+if (lamp) {
+    active.value = lamp
 }
 
 </script>
