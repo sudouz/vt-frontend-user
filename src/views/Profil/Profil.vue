@@ -3,10 +3,10 @@
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <div :class="modal
-            ? 'absolute overflow-y-auto min-h-screen flex bg-[rgba(0,0,0,0.5)] overflow-x-hidden z-50 justify-center items-center w-full inset-0 h-full'
+            ? 'absolute overflow-y-auto flex bg-[rgba(0,0,0,0.5)] overflow-x-hidden z-50 justify-center items-center w-full inset-0 h-[100vh]'
             : 'hidden'
             ">
-                <div class="relative p-4 max-w-5xl min-w-[50%] h-auto">
+                <div class="relative sm:max-w-5xl sm:min-w-[50%] w-full px-5 sm:mt-0 sm:mb-0 mt-96 mb-10 h-auto">
                     <!-- Modal content -->
                     <div class="box relative p-4 rounded-3xl shadow sm:p-5"
                         :class="navbar.userNav ? 'bg-[#12111F]' : 'bg-white'">
@@ -39,7 +39,7 @@
                                         class="text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
                                         placeholder="Rasm" @change="(e) => setImg(e)" />
                                 </div>
-                                <div class="flex items-center gap-5">
+                                <div class="flex sm:flex-row flex-col items-center gap-5">
                                     <div class="w-full">
                                         <label :class="navbar.userNav ? 'text-white' : 'text-black'" for="name"
                                             class="block mb-2 text-sm">To'liq ismi (I . F . O)</label>
@@ -55,7 +55,7 @@
                                             placeholder="Email" />
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-5">
+                                <div class="flex sm:flex-row flex-col items-center gap-5">
                                     <div class="w-full">
                                         <label :class="navbar.userNav ? 'text-white' : 'text-black'" for="password"
                                             class="block mb-2 text-sm">Eski parol</label>
