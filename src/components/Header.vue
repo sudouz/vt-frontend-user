@@ -25,9 +25,6 @@
           <div class="flex items-center  gap-5 lg:border-l lg:pl-5 border-[#4ec3e0]">
             <router-link to="/login"
               class="login lg:block hidden px-7 py-2 border border-[#4ec3e0] font-medium rounded-full bg-transparent hover:bg-[#4ec3e0] text-[#4ec3e0] hover:text-white">Kirish</router-link>
-            <router-link to="/register"
-              class="register lg:block hidden px-7 py-2 border border-[#4ec3e0] bg-[#4ec3e0] font-medium rounded-full hover:bg-transparent text-white hover:text-[#4ec3e0]">Ro'yxatdan
-              o'tish</router-link>
             <div class="relative" @click="navbar.setMode()">
               <b class="flex w-[3.1rem] items-center justify-between h-7 cursor-pointer border-2 rounded-full"><span
                   class="rounded-full"><i class="bx bxs-moon pl-1 text-yellow-300 rounded-full"></i></span><span
@@ -71,9 +68,6 @@
                     </li>
                     <router-link to="/login"
                       class="login px-7 py-2 border border-[#4ec3e0] font-medium rounded-full bg-transparent hover:bg-[#4ec3e0] text-[#4ec3e0] hover:text-white">Kirish</router-link>
-                    <router-link to="/register"
-                      class="register px-7 py-2 border border-[#4ec3e0] bg-[#4ec3e0] font-medium rounded-full hover:bg-transparent text-white hover:text-[#4ec3e0]">Ro'yxatdan
-                      o'tish</router-link>
                   </ul>
                 </div>
               </div>
