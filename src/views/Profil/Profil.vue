@@ -150,7 +150,7 @@
                                     <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">To'langan</span>
                                     <button @click="toggleModal(0)">
                                         <i :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                            class='sm:text-3xl text-sm'></i>
+                                            class='text-3xl'></i>
                                         <!-- <i class='bx bxs-bookmark' ></i> -->
                                     </button>
                                 </div>
@@ -176,7 +176,7 @@
                                     <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">To'langan</span>
                                     <button @click="toggleModal(1)">
                                         <i :class="modal[1] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                            class='sm:text-3xl text-sm'></i>
+                                            class='text-3xl'></i>
                                         <!-- <i class='bx bxs-bookmark' ></i> -->
                                     </button>
                                 </div>
@@ -205,7 +205,7 @@
                                         so'm</span>
                                     <button @click="toggleModall(2)">
                                         <i :class="modall[2] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                            class='sm:text-3xl text-sm'></i>
+                                            class='text-3xl'></i>
                                         <!-- <i class='bx bxs-bookmark' ></i> -->
                                     </button>
                                 </div>
@@ -232,7 +232,7 @@
                                         so'm</span>
                                     <button @click="toggleModall(3)">
                                         <i :class="modall[3] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                            class='sm:text-3xl text-sm'></i>
+                                            class='text-3xl'></i>
                                         <!-- <i class='bx bxs-bookmark' ></i> -->
                                     </button>
                                 </div>
@@ -258,7 +258,7 @@
                                         so'm</span>
                                     <button @click="toggleModall(5)">
                                         <i :class="modall[5] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                            class='sm:text-3xl text-sm'></i>
+                                            class='text-3xl'></i>
                                         <!-- <i class='bx bxs-bookmark' ></i> -->
                                     </button>
                                 </div>
