@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" rounded-3xl flex flex-col items-center">
+            <div class=" rounded-3xl flex flex-col items-center w-full ">
                 <div class="box flex items-center justify-between rounded-3xl w-full p-5">
                     <div class="flex items-center gap-5">
                         <img class="sm:w-20 sm:h-20 w-14 h-14" src="/user.png" alt="">
@@ -130,6 +130,142 @@
                         </button>
                     </div>
                 </div>
+
+                <div :class="active == 'videos' ? '' : 'hidden'" class="grid lg:grid-cols-3 gap-5 mt-5 w-full">
+                    <router-link to="/courses"
+                        class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
+                            <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
+                                src="https://www.kaashivinfotech.com/blog/wp-content/uploads/2023/10/html-css-beginners.jpg"
+                                alt="">
+                            <div class="flex flex-col justify-between gap-5 w-full">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">HTML/CSS</h3>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">To'langan</span>
+                                    <button @click="toggleModal(0)">
+                                        <i :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                            class='sm:text-3xl text-sm'></i>
+                                        <!-- <i class='bx bxs-bookmark' ></i> -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+
+                    <router-link to="/courses"
+                        class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
+                            <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png"
+                                alt="">
+                            <div class="flex flex-col justify-between gap-5 w-full">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">Javascript </h3>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">To'langan</span>
+                                    <button @click="toggleModal(1)">
+                                        <i :class="modal[1] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                            class='sm:text-3xl text-sm'></i>
+                                        <!-- <i class='bx bxs-bookmark' ></i> -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+                </div>
+
+                <div :class="active == 'save' ? '' : 'hidden'" class="grid lg:grid-cols-3 gap-5 mt-5 w-full">
+                    <router-link to="/courses"
+                        class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
+                            <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWGUUWRbIn8130p33QdtMYw6heRWTQI0xFxQ&usqp=CAU"
+                                alt="">
+                            <div class="flex flex-col justify-between gap-5 w-full">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">Tailwind CSS</h3>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                        so'm</span>
+                                    <button @click="toggleModall(2)">
+                                        <i :class="modall[2] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                            class='sm:text-3xl text-sm'></i>
+                                        <!-- <i class='bx bxs-bookmark' ></i> -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+
+                    <router-link to="/courses"
+                        class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
+                            <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
+                                src="https://www.loginradius.com/blog/static/6ee159acf6c294342ec04f86aede5d14/701ee/coverImage.jpg"
+                                alt="">
+                            <div class="flex flex-col justify-between gap-5 w-full">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">NodeJs </h3>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                        so'm</span>
+                                    <button @click="toggleModall(3)">
+                                        <i :class="modall[3] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                            class='sm:text-3xl text-sm'></i>
+                                        <!-- <i class='bx bxs-bookmark' ></i> -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+
+                    <router-link to="/courses"
+                        class="box rounded-3xl"
+                        :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                        <div class="p-5 flex gap-5">
+                            <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
+                                src="https://miro.medium.com/v2/resize:fit:1358/0*1VyCqSN0pdtXitey.jpg" alt="">
+                            <div class="flex flex-col justify-between gap-5 w-full">
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-2xl font-bold">NestJs </h3>
+                                    <span class="flex items-center gap-1 font-medium"><i
+                                            class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
+                                    </span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                        so'm</span>
+                                    <button @click="toggleModall(5)">
+                                        <i :class="modall[5] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                            class='sm:text-3xl text-sm'></i>
+                                        <!-- <i class='bx bxs-bookmark' ></i> -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </router-link>
+                </div>
             </div>
         </div>
     </section>
@@ -142,7 +278,17 @@ import { ref } from 'vue';
 const active = ref("videos")
 const modal = ref(false);
 const toggleModal = () => (modal.value = !modal.value);
-
+let modall = ref([]);
+for (let i = 0; i < 10; i++) {
+    modall.value.push(false)
+}
+const toggleModall = (id) => {
+    if (modall.value.length - 1 >= id) {
+        modall.value[id] = !modall.value[id]
+        console.log(modall);
+    }
+    console.log(modall.value.length);
+}
 </script>
 
 <style lang="scss" scoped>

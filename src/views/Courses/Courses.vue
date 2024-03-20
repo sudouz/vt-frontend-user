@@ -36,14 +36,22 @@
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://www.kaashivinfotech.com/blog/wp-content/uploads/2023/10/html-css-beginners.jpg"
                             alt="">
-                        <div class="flex flex-col justify-between gap-5">
+                        <div class="flex flex-col justify-between gap-5 w-full">
                             <div class="flex flex-col gap-2">
                                 <h3 class="text-2xl font-bold">HTML/CSS</h3>
                                 <span class="flex items-center gap-1 font-medium"><i
                                         class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
                                 </span>
                             </div>
-                            <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000 so'm</span>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                    so'm</span>
+                                <button @click="toggleModal(0)">
+                                    <i :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                        class='sm:text-3xl text-sm'></i>
+                                    <!-- <i class='bx bxs-bookmark' ></i> -->
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </router-link>
@@ -54,14 +62,22 @@
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png"
                             alt="">
-                        <div class="flex flex-col justify-between gap-5">
+                        <div class="flex flex-col justify-between gap-5 w-full">
                             <div class="flex flex-col gap-2">
                                 <h3 class="text-2xl font-bold">Javascript </h3>
                                 <span class="flex items-center gap-1 font-medium"><i
                                         class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
                                 </span>
                             </div>
-                            <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000 so'm</span>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                    so'm</span>
+                                <button @click="toggleModal(1)">
+                                    <i :class="modal[1] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                        class='sm:text-3xl text-sm'></i>
+                                    <!-- <i class='bx bxs-bookmark' ></i> -->
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </router-link>
@@ -72,14 +88,22 @@
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWGUUWRbIn8130p33QdtMYw6heRWTQI0xFxQ&usqp=CAU"
                             alt="">
-                        <div class="flex flex-col justify-between gap-5">
+                        <div class="flex flex-col justify-between gap-5 w-full">
                             <div class="flex flex-col gap-2">
                                 <h3 class="text-2xl font-bold">Tailwind CSS</h3>
                                 <span class="flex items-center gap-1 font-medium"><i
                                         class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
                                 </span>
                             </div>
-                            <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000 so'm</span>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                    so'm</span>
+                                <button @click="toggleModal(2)">
+                                    <i :class="modal[2] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                        class='sm:text-3xl text-sm'></i>
+                                    <!-- <i class='bx bxs-bookmark' ></i> -->
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </router-link>
@@ -90,14 +114,22 @@
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://www.loginradius.com/blog/static/6ee159acf6c294342ec04f86aede5d14/701ee/coverImage.jpg"
                             alt="">
-                        <div class="flex flex-col justify-between gap-5">
+                        <div class="flex flex-col justify-between gap-5 w-full">
                             <div class="flex flex-col gap-2">
                                 <h3 class="text-2xl font-bold">NodeJs </h3>
                                 <span class="flex items-center gap-1 font-medium"><i
                                         class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
                                 </span>
                             </div>
-                            <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000 so'm</span>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                    so'm</span>
+                                <button @click="toggleModal(3)">
+                                    <i :class="modal[3] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                        class='sm:text-3xl text-sm'></i>
+                                    <!-- <i class='bx bxs-bookmark' ></i> -->
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </router-link>
@@ -107,14 +139,22 @@
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://miro.medium.com/v2/resize:fit:1358/0*1VyCqSN0pdtXitey.jpg" alt="">
-                        <div class="flex flex-col justify-between gap-5">
+                        <div class="flex flex-col justify-between gap-5 w-full">
                             <div class="flex flex-col gap-2">
                                 <h3 class="text-2xl font-bold">NestJs </h3>
                                 <span class="flex items-center gap-1 font-medium"><i
                                         class='bx bxs-user text-lg text-[#4ec3e0]'></i>100 o'quvchi
                                 </span>
                             </div>
-                            <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000 so'm</span>
+                            <div class="flex items-center justify-between">
+                                <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
+                                    so'm</span>
+                                <button @click="toggleModal(5)">
+                                    <i :class="modal[5] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                                        class='sm:text-3xl text-sm'></i>
+                                    <!-- <i class='bx bxs-bookmark' ></i> -->
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </router-link>
@@ -127,14 +167,24 @@
 import { useNavStore } from "../../stores/toggle";
 import { ref } from 'vue';
 const navbar = useNavStore();
-const frontend = ref(true);
-const backend = ref(true);
 const active = ref("barchasi")
 
 const lamp = localStorage.getItem("active")
 
 if (lamp) {
     active.value = lamp
+}
+
+let modal = ref([]);
+for (let i = 0; i < 10; i++) {
+    modal.value.push(false)
+}
+const toggleModal = (id) => {
+    if (modal.value.length - 1 >= id) {
+        modal.value[id] = !modal.value[id]
+        console.log(modal);
+    }
+    console.log(modal.value.length);
 }
 
 </script>
