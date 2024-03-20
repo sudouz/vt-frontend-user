@@ -48,7 +48,7 @@
                                     so'm</span>
                                 <button @click="toggleModal(0)">
                                     <i :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='sm:text-3xl text-sm'></i>
+                                        class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -74,7 +74,7 @@
                                     so'm</span>
                                 <button @click="toggleModal(1)">
                                     <i :class="modal[1] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='sm:text-3xl text-sm'></i>
+                                        class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -100,7 +100,7 @@
                                     so'm</span>
                                 <button @click="toggleModal(2)">
                                     <i :class="modal[2] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='sm:text-3xl text-sm'></i>
+                                        class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -126,7 +126,7 @@
                                     so'm</span>
                                 <button @click="toggleModal(3)">
                                     <i :class="modal[3] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='sm:text-3xl text-sm'></i>
+                                        class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -151,7 +151,7 @@
                                     so'm</span>
                                 <button @click="toggleModal(5)">
                                     <i :class="modal[5] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='sm:text-3xl text-sm'></i>
+                                        class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
