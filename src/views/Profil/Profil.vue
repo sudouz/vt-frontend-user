@@ -1,5 +1,5 @@
 <template>
-    <section class="2xl:pt-40 pt-40 relative z-10"
+    <section class="2xl:pt-40 pt-40 relative z-10 pb-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <div :class="modal
