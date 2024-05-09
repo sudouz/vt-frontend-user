@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <section class="bg-[#4ec3e0]">
     <div class="container mx-auto px-5">
-      <div class="pt-40 relative z-10">
+      <div class="pt-40 lg:pb-20 pb-10 relative z-10">
         <div
-          class="bg-[#4ec3e0] px-5 sm:py-20 py-10 rounded-3xl flex items-center justify-center"
+          class="box-2 px-5 sm:py-20 py-10 rounded-3xl flex items-center justify-center"
         >
           <div
             class="flex sm:flex-row flex-col items-center justify-between w-full sm:px-20"
@@ -39,7 +39,7 @@
               </button>
             </div>
             <img
-              class="sm:w-72 sm:h-72 lg:block hidden rounded-3xl"
+              class="sm:w-72 sm:h-72 xl:block hidden rounded-3xl"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png"
               alt=""
             />
@@ -52,7 +52,7 @@
   <section>
     <div class="container mx-auto px-5">
       <div
-        class="sm:pt-28 pt-20 relative z-10"
+        class="lg:pt-20 pt-10 relative z-10"
         :class="{
           ' text-white': navbar.userNav,
           ' text-[#12111F]': !navbar.userNav,
@@ -99,16 +99,16 @@
   <section>
     <div class="container mx-auto px-5">
       <div
-        class="sm:pt-28 pt-20 relative z-10"
+        class="lg:pt-20 pt-10 lg:pb-20 pb-10 relative z-10"
         :class="{
           ' text-white': navbar.userNav,
           ' text-[#12111F]': !navbar.userNav,
         }"
       >
-        <div class="flex lg:flex-row flex-col lg:gap-10 gap-20">
+        <div class="flex lg:flex-row flex-col gap-10">
           <div class="flex flex-col gap-5">
             <iframe
-              class="2xl:w-[1000px] 2xl:h-[600px] lg:w-[800px] lg:h-[500px] w-full sm:h-[400px] h-52"
+              class="2xl:w-[1000px] 2xl:h-[600px] xl:w-[800px] xl:h-[500px] w-full sm:h-[350px] h-52"
               src="https://www.youtube.com/embed/PZUr2YyYmFY?si=5z_4aCguWiPe3dUH"
               title="YouTube video player"
               frameborder="0"
@@ -367,11 +367,11 @@
     </div>
   </section>
 
-  <section>
+  <section class="bg-[#4ec3e0]">
     <div class="container mx-auto px-5">
-      <div class="sm:pt-28 pt-20 relative z-10">
+      <div class="lg:pt-20 pt-10 lg:pb-20 pb-10 relative z-10">
         <div
-          class="bg-[#4ec3e0] px-5 sm:py-20 py-10 rounded-3xl flex items-center justify-center"
+          class="box-2 px-5 sm:py-20 py-10 rounded-3xl flex items-center justify-center"
         >
           <div
             class="flex lg:flex-row flex-col lg:items-center gap-5 justify-between w-full sm:px-20"
@@ -427,7 +427,7 @@
   </section>
 
   <section
-    class="relative z-10 sm:pt-28 pt-20"
+    class="relative z-10 lg:pt-20 pt-10 pb-10"
     :class="{
       ' text-white': navbar.userNav,
       ' text-[#12111F]': !navbar.userNav,
@@ -855,15 +855,15 @@
   </section>
 
   <section
-    class="relative z-20 lg:pt-40 sm:pt-20 pt-20"
+    class="bg-[#4ec3e0] relative z-20 lg:pt-40 pt-10 lg:pb-40 pb-10"
     :class="{
       ' text-white': navbar.userNav,
       ' text-[#12111F]': !navbar.userNav,
     }"
   >
     <div class="container mx-auto px-5">
-      <div class="bg-[#4ec3e0] relative rounded-3xl lg:px-20 lg:py-28">
-        <div class="hidden lg:flex flex-col gap-5 w-[50%]">
+      <div class="box-2 relative rounded-3xl xl:px-20 lg:px-10 xl:py-28 lg:py-16">
+        <div class="hidden lg:flex flex-col gap-5 w-[40%]">
           <h2
             class="text-5xl font-bold"
             :class="{
@@ -958,7 +958,7 @@
   </section>
 
   <section
-    class="relative z-10 sm:pt-40 pt-20"
+    class="relative z-10 lg:pt-20 pt-10 lg:pb-20 pb-10"
     :class="{
       ' text-white': navbar.userNav,
       ' text-[#12111F]': !navbar.userNav,
@@ -966,7 +966,7 @@
   >
     <div class="container mx-auto px-5">
       <h2 class="sm:text-3xl text-2xl font-bold mb-5">Boshqa darslar</h2>
-      <div class="grid lg:grid-cols-3 gap-5">
+      <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-5">
         <router-link
           :to="`/course/${1}/javascript`"
           :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
@@ -1086,15 +1086,55 @@
             </div>
           </div>
         </router-link>
+
+        <router-link
+          :to="`/course/${1}/javascript`"
+          :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
+          class="box rounded-3xl xl:hidden block"
+          :class="{
+            'bg-[#12111F]': navbar.userNav,
+            'bg-white': !navbar.userNav,
+          }"
+        >
+          <div class="p-5 flex gap-5">
+            <img
+              class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
+              src="https://www.kaashivinfotech.com/blog/wp-content/uploads/2023/10/html-css-beginners.jpg"
+              alt=""
+            />
+            <div class="flex flex-col justify-between gap-5 w-full">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-2xl font-bold">HTML/CSS</h3>
+                <span class="flex items-center gap-1 font-medium"
+                  ><i class="bx bxs-user text-lg text-[#4ec3e0]"></i>100
+                  o'quvchi
+                </span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]"
+                  >20 000 so'm</span
+                >
+                <button @click="toggleModal(0)">
+                  <i
+                    :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
+                    class="text-3xl"
+                  ></i>
+                  <!-- <i class='bx bxs-bookmark' ></i> -->
+                </button>
+              </div>
+            </div>
+          </div>
+        </router-link>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="bg-[#4ec3e0]">
     <div class="container mx-auto px-5">
-      <div class="sm:pt-28 pt-20 sm:pb-28 pb-20 relative z-10">
+      <div class="lg:pt-20 pt-10 lg:pb-20 pb-10 relative z-10">
         <div
-          class="bg-[#4ec3e0] px-5 sm:py-20 py-10 rounded-3xl flex items-center justify-center"
+          class="box-2 px-5 sm:py-20 py-10 rounded-3xl flex items-center justify-center"
         >
           <div
             class="flex lg:flex-row flex-col lg:items-center gap-5 justify-between w-full sm:px-20"
@@ -1233,6 +1273,12 @@ export default {
   -webkit-box-shadow: inset 0px 0px 10px 0px rgba(78, 195, 224, 1);
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(78, 195, 224, 1);
   box-shadow: inset 0px 0px 10px 0px rgba(78, 195, 224, 1);
+}
+
+.box-2 {
+  -webkit-box-shadow: inset 0px 0px 10px 0px #12111f;
+  -moz-box-shadow: inset 0px 0px 10px 0px #12111f;
+  box-shadow: inset 0px 0px 10px 0px #12111f;
 }
 
 .hero-title {

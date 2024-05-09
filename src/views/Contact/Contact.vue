@@ -1,16 +1,16 @@
 <template>
   <section
-    class="relative z-10 lg:pt-60 pt-40"
+    class="bg-[#4ec3e0] relative z-10 lg:pt-60 pt-10 lg:pb-40 pb-10"
     :class="{
       ' text-white': navbar.userNav,
       ' text-[#12111F]': !navbar.userNav,
     }"
   >
     <div class="container mx-auto px-5">
-      <div class="bg-[#4ec3e0] relative rounded-3xl lg:px-5 lg:py-28">
-        <div class="hidden lg:flex flex-col gap-5 w-[60%]">
+      <div class="box-2 relative rounded-3xl lg:px-5 xl:py-28 lg:py-20">
+        <div class="hidden lg:flex flex-col gap-5 xl:w-[60%] w-[40%]">
           <h2
-            class="text-5xl font-bold"
+            class="xl:text-5xl text-4xl font-bold"
             :class="{
               ' text-[#12111F]': navbar.userNav,
               ' text-white': !navbar.userNav,
@@ -103,7 +103,7 @@
   </section>
 
   <section
-    class="relative z-10 lg:mt-40 sm:mt-20 mt-10 sm:pb-20 pb-10"
+    class="relative z-10 lg:mt-20 mt-10 sm:pb-20 pb-10"
     :class="{
       ' text-white': navbar.userNav,
       ' text-[#12111F]': !navbar.userNav,
@@ -597,5 +597,11 @@ const toggleModal = (id) => {
   -webkit-box-shadow: inset 0px 0px 10px 0px rgba(78, 195, 224, 1);
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(78, 195, 224, 1);
   box-shadow: inset 0px 0px 10px 0px rgba(78, 195, 224, 1);
+}
+
+.box-2 {
+  -webkit-box-shadow: inset 0px 0px 10px 0px #12111f;
+  -moz-box-shadow: inset 0px 0px 10px 0px #12111f;
+  box-shadow: inset 0px 0px 10px 0px #12111f;
 }
 </style>
