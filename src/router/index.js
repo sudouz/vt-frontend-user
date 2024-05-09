@@ -34,6 +34,11 @@ const router = createRouter({
           name: "course_slug",
           component: () => import("../views/Courses/_slug.vue"),
         },
+        {
+          path: "/profile/open-course/:id/:name",
+          name: "profile_slug",
+          component: () => import("../views/Profil/_slug.vue"),
+        },
       ],
     },
     

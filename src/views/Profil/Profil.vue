@@ -191,7 +191,11 @@
               John Doe
             </h2>
             <a
-              class="flex items-center gap-1 sm:text-sm text-xs font-medium hover:underline cursor-pointer hover:text-[#4ec3e0]"
+              :class="{
+                ' hover:text-[#12111F]': navbar.userNav,
+                ' hover:text-white': !navbar.userNav,
+              }"
+              class="flex items-center gap-1 sm:text-sm text-xs font-medium hover:underline cursor-pointer"
             >
               johndoe@gmail.com
             </a>
@@ -226,7 +230,7 @@
       </div>
     </div>
   </section>
-
+    
   <section>
     <div class="container mx-auto px-5">
       <div
@@ -241,7 +245,7 @@
         </h2>
         <div class="grid xl:grid-cols-3 lg:grid-cols-2 gap-5 mt-5 w-full">
           <router-link
-            to="/courses"
+          :to="`/profile/open-course/${1}/javascript`"
             class="box rounded-3xl"
             :class="{
               'bg-[#12111F]': navbar.userNav,
@@ -273,7 +277,7 @@
           </router-link>
 
           <router-link
-            to="/courses"
+          :to="`/profile/open-course/${1}/javascript`"
             class="box rounded-3xl"
             :class="{
               'bg-[#12111F]': navbar.userNav,
