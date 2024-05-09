@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#4ec3e0] relative z-10 lg:pt-60 pt-10 lg:pb-40 pb-10"
+    class="bg-[#4ec3e0] relative z-10 lg:pt-60 pt-40 lg:pb-40 pb-10"
     :class="{
       ' text-white': navbar.userNav,
       ' text-[#12111F]': !navbar.userNav,
