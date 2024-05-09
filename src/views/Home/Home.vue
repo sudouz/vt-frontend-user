@@ -63,12 +63,14 @@
     <section>
         <div class="container mx-auto px-5">
             <div class="2xl:pt-40 pt-40 relative z-10">
-                <div class="box px-5 py-20 rounded-3xl flex items-center justify-center">
+                <div class="bg-[#4ec3e0] px-5 py-20 rounded-3xl flex items-center justify-center">
                     <div class="flex flex-col items-center  gap-10"
                         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
-                        <h2 class="uppercase sm:text-2xl text-md font-bold text-[#4ec3e0]">virtual ta'lim</h2>
+                        <h2 class="uppercase sm:text-2xl text-md font-bold ">virtual ta'lim</h2>
                         <div class="flex flex-col items-center gap-5">
-                            <h1 class="hero-title 2xl:text-8xl lg:text-7xl sm:text-6xl text-2xl font-bold text-center">Biz
+                            <h1 class="hero-title 2xl:text-8xl lg:text-7xl sm:text-6xl text-2xl font-bold text-center"
+                                :class="{ ' text-[#12111F]': navbar.userNav, ' text-white': !navbar.userNav }">
+                                Biz
                                 bilim
                                 olishingizga ko'maklashamiz!</h1>
                             <p class=" sm:text-base text-xs">
@@ -76,8 +78,8 @@
                             </p>
                         </div>
                         <button
-                            class="rounded-full bg-[#4ec3e0] text-lg font-medium text-white py-2 px-7 border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0]">
-                            <router-link to="/courses">Kurslarni korish</router-link>
+                            class="rounded-full bg-white text-lg font-medium text-[#12111F] py-2 px-7 border border-white hover:border-[#12111F] hover:text-white hover:bg-[#12111F]">
+                            <router-link to="/courses">Kurslarni ko'rish</router-link>
                         </button>
                     </div>
                 </div>
@@ -242,21 +244,22 @@
         </div>
     </section>
 
-    <section class="relative z-10 lg:pt-40 sm:pt-20 pt-10"
+    <section class="relative z-20 lg:pt-40 sm:pt-20 pt-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box relative rounded-3xl lg:px-5  lg:py-28"
-                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
-                <div class="hidden lg:flex flex-col gap-5 w-[40%]">
-                    <h2 class="text-5xl font-bold">Savollaringiz bormi ?</h2>
+            <div class="bg-[#4ec3e0] relative rounded-3xl lg:px-20  lg:py-28">
+                <div class="hidden lg:flex flex-col gap-5 w-[50%]">
+                    <h2 class="text-5xl font-bold"
+                        :class="{ ' text-[#12111F]': navbar.userNav, ' text-white': !navbar.userNav }">Savollaringiz bormi ?</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae voluptatum error incidunt eum
                         similique iure exercitationem numquam fuga rerum assumenda laborum
                     </p>
                 </div>
-                <div class="box lg:absolute -top-16 2xl:right-40 right-20 lg:w-[400px] rounded-3xl px-5 py-10"
+                <div class="box lg:absolute -top-20 2xl:right-40 right-20 lg:w-[400px] rounded-3xl px-5 py-10"
                     :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <h2 class="lg:hidden block sm:text-3xl text-2xl font-bold mb-2">Savollaringiz bormi ?</h2>
-                    <p class="lg:hidden block text-xs mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                    <p class="lg:hidden block text-xs mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sint
                         quae voluptatum error incidunt eum
                         similique iure exercitationem numquam fuga rerum assumenda laborum
                     </p>
@@ -280,7 +283,8 @@
                                 class="w-full min-h-24 max-h-24 border outline-none text-sm rounded-2xl block p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"></textarea>
                         </div>
                         <button type="submit"
-                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-full text-sm px-5 py-2.5 text-center">
+                            :class="{ 'hover:border-white hover:bg-white hover:text-[#4ec3e0]': navbar.userNav, 'hover:bg-[#12111F] hover:border-[#12111F]': !navbar.userNav }"
+                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-full text-sm px-5 py-2.5 text-center">
                             Jo'natish
                         </button>
                     </form>
@@ -397,7 +401,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -421,7 +426,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -445,7 +451,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -469,7 +476,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -499,7 +507,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -523,7 +532,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -547,7 +557,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -571,7 +582,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -601,7 +613,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -625,7 +638,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -649,7 +663,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -673,7 +688,8 @@
                                     <h3 class="text-lg font-bold">John Doe</h3>
                                 </div>
                                 <div class="flex flex-col gap-8">
-                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <p class="sm:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
                                         Aperiam
                                         suscipit dolorem officiis
                                         in, unde inventore, laudantium atque praesentium hic rem culpa minus. Recusandae
@@ -725,10 +741,11 @@
     <section class="relative z-10 lg:pt-40 sm:pt-20 pt-10 lg:pb-40 pb-10"
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
-            <div class="box relative rounded-3xl lg:px-5  lg:py-28"
-                :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+            <div class="bg-[#4ec3e0] relative rounded-3xl lg:px-5  lg:py-28">
                 <div class="hidden lg:flex flex-col gap-5 w-[60%]">
-                    <h2 class="text-5xl font-bold">Biz bilan bog'lanmoqchimisiz ?</h2>
+                    <h2 class="text-5xl font-bold"
+                        :class="{ ' text-[#12111F]': navbar.userNav, ' text-white': !navbar.userNav }">Biz bilan
+                        bog'lanmoqchimisiz ?</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae voluptatum error incidunt eum
                         similique iure exercitationem numquam fuga rerum assumenda laborum
                     </p>
@@ -736,7 +753,8 @@
                 <div class="box lg:absolute -top-16 2xl:right-40 right-20 lg:w-[400px] rounded-3xl px-5 py-10"
                     :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <h2 class="lg:hidden block sm:text-3xl text-2xl font-bold mb-2">Biz bilan bog'lanmoqchimisiz ?</h2>
-                    <p class="lg:hidden block text-xs mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                    <p class="lg:hidden block text-xs mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sint
                         quae voluptatum error incidunt eum
                         similique iure exercitationem numquam fuga rerum assumenda laborum
                     </p>
@@ -748,7 +766,8 @@
                                 placeholder="Ismingizni yozing" required="" />
                         </div>
                         <div>
-                            <label for="phone" class="block mb-2 sm:text-lg text-sm font-medium">Telefon raqamingiz</label>
+                            <label for="phone" class="block mb-2 sm:text-lg text-sm font-medium">Telefon
+                                raqamingiz</label>
                             <input type="tel" name="tel" id="phone" placeholder="+998"
                                 class="border outline-none text-sm rounded-full block w-full p-4 bg-transparent border-[#4ec3e0] placeholder-gray-400"
                                 required="" />
@@ -761,7 +780,8 @@
                                 required="" />
                         </div>
                         <button type="submit"
-                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] hover:bg-transparent hover:text-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-full text-sm px-5 py-2.5 text-center">
+                            :class="{ 'hover:border-white hover:bg-white hover:text-[#4ec3e0]': navbar.userNav, 'hover:bg-[#12111F] hover:border-[#12111F]': !navbar.userNav }"
+                            class="w-full bg-[#4ec3e0] text-white border border-[#4ec3e0] focus:ring-4 focus:outline-none focus:ring-[#4ec3e0] font-medium rounded-full text-sm px-5 py-2.5 text-center">
                             Jo'natish
                         </button>
                     </form>
@@ -773,7 +793,6 @@
 
 <script>
 import { useNavStore } from "../../stores/toggle";
-import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';

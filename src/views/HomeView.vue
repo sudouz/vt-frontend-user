@@ -19,4 +19,19 @@ const navbar = useNavStore();
 button {
   transition: 0.5s;
 }
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    background: #12111F;
+    box-shadow: inset 0 0 5px #12111F;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #4ec3e0;
+    border-radius: 15px;
+
+}
 </style>

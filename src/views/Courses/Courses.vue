@@ -30,8 +30,9 @@
         :class="{ ' text-white': navbar.userNav, ' text-[#12111F]': !navbar.userNav }">
         <div class="container mx-auto px-5">
             <div class="grid lg:grid-cols-3 gap-5">
-                <router-link to="/courses" :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
-                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link :to="`/course/${1}/javascript`"
+                    :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'" class="box rounded-3xl"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://www.kaashivinfotech.com/blog/wp-content/uploads/2023/10/html-css-beginners.jpg"
@@ -47,8 +48,7 @@
                                 <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
                                     so'm</span>
                                 <button @click="toggleModal(0)">
-                                    <i :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='text-3xl'></i>
+                                    <i :class="modal[0] ? 'bx bxs-bookmark' : 'bx bx-bookmark'" class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -56,8 +56,9 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
-                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link :to="`/course/${1}/javascript`"
+                    :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'" class="box rounded-3xl"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png"
@@ -73,8 +74,7 @@
                                 <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
                                     so'm</span>
                                 <button @click="toggleModal(1)">
-                                    <i :class="modal[1] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='text-3xl'></i>
+                                    <i :class="modal[1] ? 'bx bxs-bookmark' : 'bx bx-bookmark'" class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -82,8 +82,9 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'"
-                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link :to="`/course/${1}/javascript`"
+                    :id="active == 'frontend' || active == 'barchasi' ? '' : 'hidden'" class="box rounded-3xl"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWGUUWRbIn8130p33QdtMYw6heRWTQI0xFxQ&usqp=CAU"
@@ -99,8 +100,7 @@
                                 <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
                                     so'm</span>
                                 <button @click="toggleModal(2)">
-                                    <i :class="modal[2] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='text-3xl'></i>
+                                    <i :class="modal[2] ? 'bx bxs-bookmark' : 'bx bx-bookmark'" class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -108,8 +108,9 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="active == 'backend' || active == 'barchasi' ? '' : 'hidden'"
-                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link :to="`/course/${1}/javascript`"
+                    :id="active == 'backend' || active == 'barchasi' ? '' : 'hidden'" class="box rounded-3xl"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://www.loginradius.com/blog/static/6ee159acf6c294342ec04f86aede5d14/701ee/coverImage.jpg"
@@ -125,8 +126,7 @@
                                 <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
                                     so'm</span>
                                 <button @click="toggleModal(3)">
-                                    <i :class="modal[3] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='text-3xl'></i>
+                                    <i :class="modal[3] ? 'bx bxs-bookmark' : 'bx bx-bookmark'" class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -134,8 +134,9 @@
                     </div>
                 </router-link>
 
-                <router-link to="/courses" :id="active == 'backend' || active == 'barchasi' ? '' : 'hidden'"
-                    class="box rounded-3xl" :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
+                <router-link :to="`/course/${1}/javascript`"
+                    :id="active == 'backend' || active == 'barchasi' ? '' : 'hidden'" class="box rounded-3xl"
+                    :class="{ 'bg-[#12111F]': navbar.userNav, 'bg-white': !navbar.userNav }">
                     <div class="p-5 flex gap-5">
                         <img class="sm:w-40 sm:h-40 w-20 h-20 rounded-3xl"
                             src="https://miro.medium.com/v2/resize:fit:1358/0*1VyCqSN0pdtXitey.jpg" alt="">
@@ -150,8 +151,7 @@
                                 <span class="flex items-center gap-1 font-bold text-2xl text-[#4ec3e0]">20 000
                                     so'm</span>
                                 <button @click="toggleModal(5)">
-                                    <i :class="modal[5] ? 'bx bxs-bookmark' : 'bx bx-bookmark'"
-                                        class='text-3xl'></i>
+                                    <i :class="modal[5] ? 'bx bxs-bookmark' : 'bx bx-bookmark'" class='text-3xl'></i>
                                     <!-- <i class='bx bxs-bookmark' ></i> -->
                                 </button>
                             </div>
@@ -165,7 +165,7 @@
 
 <script setup>
 import { useNavStore } from "../../stores/toggle";
-import { ref } from 'vue';
+import { ref, reactive, onMounted } from 'vue';
 const navbar = useNavStore();
 const active = ref("barchasi")
 

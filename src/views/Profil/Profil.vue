@@ -282,6 +282,7 @@ let modall = ref([]);
 for (let i = 0; i < 10; i++) {
     modall.value.push(false)
 }
+
 const toggleModall = (id) => {
     if (modall.value.length - 1 >= id) {
         modall.value[id] = !modall.value[id]

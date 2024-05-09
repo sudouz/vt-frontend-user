@@ -29,7 +29,11 @@ const router = createRouter({
           name: "profil",
           component: () => import("../views/Profil/Profil.vue"),
         },
-
+        {
+          path: "/course/:id/:name",
+          name: "course_slug",
+          component: () => import("../views/Courses/_slug.vue"),
+        },
       ],
     },
     
